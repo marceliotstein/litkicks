@@ -1,0 +1,13 @@
+      <?php 
+         print "<!-- SERIESJUNK "; 
+         $series_tid = $item['#options']['entity']->tid;
+         print_r($item);
+         $series_text = "";
+         if ($series_tid > 0) {
+            print $series_tid;
+            //print "NID IS " . $node->nid;
+            $series_text = lktaxonomy_series_links($series_tid);
+            print $series_text;
+         }
+         print "-->"; 
+      ?>

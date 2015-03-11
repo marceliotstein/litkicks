@@ -1,0 +1,6 @@
+  <script type="text/javascript">
+    // if fbitem page type, don't show page title
+    jQuery(document).ready(function() {
+      jQuery('#page-title').hide();
+    });
+  </script>
