@@ -74,19 +74,19 @@
 */
 ?>
 <div class="lknavbar">
-  <div class="container-fluid">
-    <div class="navbar-header row col-xs-12">
+  <div class="lkunpad container">
+    <div class="navbar-header lkflush row col-xs-12">
       <!-- narrow way -->
-      <div class="row col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
+      <div class="lkflush row col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
         <table class="lknarrowtable">
           <tr>
             <td class="lknarrowtable-logo">
-              <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+              <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
                 <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
               </a>
             </td>
             <td class="lknarrowtable-title">
-              <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+              <a class="lknarrow-sitetitle" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">Literary Kicks</a>
             </td>
             <td class="lknarrowtable-menu">
               <div class="dropdown pull-right">
@@ -122,19 +122,19 @@
             <td class="lkwidetoplinks-td">
               <div class="branding-links">
                 <span class="branding-linkbox">
-                  <a href="/AboutUs">About Litkicks</a> <img src="/litkicks/sites/all/themes/litstrap/images/laicon24.png" />
-                </span>
-                <span class="branding-linkbox">
-                  <a href="http://feeds.feedburner.com/LiteraryKicks">Subscribe</a> <img src="/litkicks/sites/all/themes/litstrap/images/rsicon24.png" />
-                </span>
-                <span class="branding-linkbox">
-                  <a href="http://twitter.com/asheresque">Twitter</a> <img src="/litkicks/sites/all/themes/litstrap/images/twicon24.png" />
+                  <a href="/Archives">Archives (1994 to 2015)</a> <img src="/litkicks/sites/all/themes/litstrap/images/lkicon24.png" />
                 </span>
                 <span class="branding-linkbox">
                   <a href="http://www.facebook.com/litkicks">Facebook</a> <img src="/litkicks/sites/all/themes/litstrap/images/fbicon24.png" />
                 </span>
                 <span class="branding-linkbox">
-                  <a href="/Archives">Archives (1994 to 2015)</a> <img src="/litkicks/sites/all/themes/litstrap/images/lkicon24.png" />
+                  <a href="http://twitter.com/asheresque">Twitter</a> <img src="/litkicks/sites/all/themes/litstrap/images/twicon24.png" />
+                </span>
+                <span class="branding-linkbox">
+                  <a href="http://feeds.feedburner.com/LiteraryKicks">Subscribe</a> <img src="/litkicks/sites/all/themes/litstrap/images/rsicon24.png" />
+                </span>
+                <span class="branding-linkbox">
+                  <a href="/AboutUs">About Litkicks</a> <img src="/litkicks/sites/all/themes/litstrap/images/laicon24.png" />
                 </span>
               </div>
             </td>
@@ -146,8 +146,8 @@
               <a href="/" id="logo" title="Return to the Literary Kicks home page" class="active"><img typeof="foaf:Image" src="http://www.litkicks.com/sites/default/files/paularoid217.jpg" alt="Literary Kicks" /></a>
             </td>
             <td>
-              <h1 class="site-name"><a href="/" title="Return to the Literary Kicks home page"><span>Literary<br />Kicks</span></a></h1>
-            </td>
+              <a class="lkwide-sitetitle" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">Literary<br />Kicks</a>
+              </td>
           </tr>
         </table>
 

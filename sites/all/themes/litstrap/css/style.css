@@ -2,6 +2,25 @@
 /* custom CSS for literary kicks litmega drupal 7 */
 /**************************************************/
 
+.lkflush {
+  margin: 0px;
+  padding: 0px;
+}
+
+.lkunpad {
+  padding: 0px;
+}
+
+.lkborder {
+  border-style: dashed;
+  border-width: 1px;
+  border-color: blue;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
 .lkwidetoplinks {
   width: 100%;
 }
@@ -9,18 +28,23 @@
 .lkwidetoplinks-td {
   text-align: right;
 }
+
 .wide-topline {
-  border-width: 1px;
-  border-style: dotted;
-  border-color: blue;
   padding: 10px;
 }
 
 .branding-links {
-  border-width: 1px;
-  border-style: dotted;
-  border-color: green;
   text-align: right;
+}
+
+.branding-linkbox {
+  font-family: verdana, georgia, serif;
+  font-variant: small-caps;
+  margin-left: 8px;
+}
+
+.branding-links a {
+  color: #000000;
 }
 
 body {
@@ -29,13 +53,9 @@ body {
 }
 
 .lknarrowtable {
-  /*
-  border-width: 1px;
-  border-style: dotted;
-  border-color: green;
-  */
   width: 100%;
   height: 153px;
+  padding-bottom: 20px;
 }
 
 .lknarrowtable-title {
@@ -51,9 +71,6 @@ body {
 .lkwidetable {
   width: 100%;
   height: 217px;
-  border-width: 1px;
-  border-style: dotted;
-  border-color: green;
 }
 
 .lkwidetable-logo {
@@ -64,10 +81,25 @@ body {
   float: left;
 }
 
-.navbar-default .navbar-brand {
+.lknarrow-sitetitle {
   font-family: helvetica, arial, sans-serif;
   font-size: 3em;
   font-weight: bold;
+  color: #006f3f;
+  text-decoration: none;
+}
+
+.lkwide-sitetitle {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 5em;
+  font-weight: bold;
+  color: #006f3f;
+  text-decoration: none;
+  line-height: .9em;
+}
+
+a:active {
+  text-decoration: none;
   color: #006f3f;
 }
 
