@@ -1,4 +1,106 @@
-/**
- * This file should get overwritten if Method 1 is used. If Method 2 is chosen,
- * remove this comment and start adding your styles to this file.
- */
+/**************************************************/
+/* custom CSS for literary kicks litmega drupal 7 */
+/**************************************************/
+
+/*
+.navbar-header {
+  vertical-align: middle;
+  height: 153px;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+.navbar.container {
+  margin: 0px;
+  padding: 0px;
+}
+
+.header-logo, .header-title {
+  float: left;
+  height: 153px;
+  line-height: 130px;
+  padding: 0px
+  margin: 0px;
+  vertical-align: middle;
+}
+
+.navbar-btn {
+  margin: 0px;
+}
+
+.navbar-default .navbar-brand {
+  height: 153px;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 74px;
+  font-weight: bold;
+  color: #006f3f;
+  vertical-align: middle
+  display: inline-block;
+}
+
+body {
+   font: 13.5px/1.5 Trebuchet MS, Helvetica, Arial, sans-serif;
+   color: #333333;
+   background-color: #c3c3c3;
+}
+/*
+
+a, a:link, a:visited {
+  color: #503077;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #aaaa7f;
+  text-decoration: none;
+}
+
+a:active {
+  color: #55554f;
+  text-decoration: none;
+}
+
+div#commentintro {
+   padding-top: 18px;
+}
+
+div#comments h1, div#comments h2 {
+   font-family: helvetica, arial, sans-serif;
+}
+
+div#comments article {
+   width: 464px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: #404048;
+   padding: 6px;
+   margin: 10px;
+   margin-bottom: 18px;
+}
+
+.comment-submitted {
+   font-weight: bold;
+   font-size: 1.1em;
+   font-style: italic;
+   margin-bottom: 16px;
+   margin-left: 0px;
+   padding-left: 0px;
+}
+
+#commentintro, #commentintro a,
+#readmorethoughts, #readmorethoughts a {
+   font-family: Verdana, Georgia, serif;
+   font-weight: bold;
+   font-variant: small-caps;
+}
+
+#commentintro, #commentintro a {
+   font-size: 1.2em;
+}
+
+#readmorethoughts, #readmorethoughts a {
+   float: right;
+}
+*/
