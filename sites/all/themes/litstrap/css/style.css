@@ -2,6 +2,32 @@
 /* custom CSS for literary kicks litmega drupal 7 */
 /**************************************************/
 
+body {
+   font: 13.5px/1.5 Trebuchet MS, Helvetica, Arial, sans-serif;
+   background-color: #e3e3e3;
+}
+
+.lktoptable {
+  /*
+  border-width: 1px;
+  border-style: dotted;
+  border-color: green;
+  */
+  height: 153px;
+}
+
+.lktoptable-title {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.navbar-default .navbar-brand {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 61px;
+  font-weight: bold;
+  color: #006f3f;
+}
+
 /*
 .navbar-header {
   vertical-align: middle;
@@ -9,8 +35,6 @@
   padding: 0px;
   margin: 0px;
 }
-
-
 
 .navbar.container {
   margin: 0px;
@@ -30,21 +54,7 @@
   margin: 0px;
 }
 
-.navbar-default .navbar-brand {
-  height: 153px;
-  font-family: helvetica, arial, sans-serif;
-  font-size: 74px;
-  font-weight: bold;
-  color: #006f3f;
-  vertical-align: middle
-  display: inline-block;
-}
 
-body {
-   font: 13.5px/1.5 Trebuchet MS, Helvetica, Arial, sans-serif;
-   color: #333333;
-   background-color: #c3c3c3;
-}
 /*
 
 a, a:link, a:visited {
