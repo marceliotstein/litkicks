@@ -73,11 +73,11 @@
 * @ingroup themeable
 */
 ?>
-<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+<div class="lknavbar">
   <div class="container-fluid">
-    <div class="navbar-header">
+    <div class="navbar-header row col-xs-12">
       <!-- narrow way -->
-      <div class="xs-col-12 sm-col-12 hidden-md hidden-lg hidden-xl">
+      <div class="row col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
         <table class="lknarrowtable">
           <tr>
             <td class="lknarrowtable-logo">
@@ -117,36 +117,40 @@
       </div>
       <!-- wide way -->
       <div class="hidden-xs hidden-sm col-md-12 col-lg-12 col-xl-12">
-        <div class="wide-topline">
-          <div class="container">
-            <div class="branding-links col-md-12">
-              <span class="branding-linkbox">
-                <a href="/AboutUs">About Litkicks</a> <img src="/litkicks/sites/all/themes/litstrap/images/laicon24.png" />
-              </span>
-              <span class="branding-linkbox">
-                <a href="http://feeds.feedburner.com/LiteraryKicks">Subscribe</a> <img src="/litkicks/sites/all/themes/litstrap/images/rsicon24.png" />
-              </span>
-              <span class="branding-linkbox">
-                <a href="http://twitter.com/asheresque">Twitter</a> <img src="/litkicks/sites/all/themes/litstrap/images/twicon24.png" />
-              </span>
-              <span class="branding-linkbox">
-                <a href="http://www.facebook.com/litkicks">Facebook</a> <img src="/litkicks/sites/all/themes/litstrap/images/fbicon24.png" />
-              </span>
-              <span class="branding-linkbox">
-                <a href="/Archives">Archives (1994 to 2015)</a> <img src="/litkicks/sites/all/themes/litstrap/images/lkicon24.png" />
-              </span>
-            </div>
-          </div>
-          <table class="lkwidetable">
-            <tr>
-              <td class="lkwidetable-logo">
-                <a href="/" id="logo" title="Return to the Literary Kicks home page" class="active"><img typeof="foaf:Image" src="http://www.litkicks.com/sites/default/files/paularoid217.jpg" alt="Literary Kicks" /></a>
-              </td>
-              <td>
-                <h1 class="site-name"><a href="/" title="Return to the Literary Kicks home page"><span>Literary<br />Kicks</span></a></h1>
-              </td>
-            </tr>
-          </table>
+        <table class="lkwidetoplinks">
+          <tr>
+            <td class="lkwidetoplinks-td">
+              <div class="branding-links">
+                <span class="branding-linkbox">
+                  <a href="/AboutUs">About Litkicks</a> <img src="/litkicks/sites/all/themes/litstrap/images/laicon24.png" />
+                </span>
+                <span class="branding-linkbox">
+                  <a href="http://feeds.feedburner.com/LiteraryKicks">Subscribe</a> <img src="/litkicks/sites/all/themes/litstrap/images/rsicon24.png" />
+                </span>
+                <span class="branding-linkbox">
+                  <a href="http://twitter.com/asheresque">Twitter</a> <img src="/litkicks/sites/all/themes/litstrap/images/twicon24.png" />
+                </span>
+                <span class="branding-linkbox">
+                  <a href="http://www.facebook.com/litkicks">Facebook</a> <img src="/litkicks/sites/all/themes/litstrap/images/fbicon24.png" />
+                </span>
+                <span class="branding-linkbox">
+                  <a href="/Archives">Archives (1994 to 2015)</a> <img src="/litkicks/sites/all/themes/litstrap/images/lkicon24.png" />
+                </span>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <table class="lkwidetable">
+          <tr>
+            <td class="lkwidetable-logo">
+              <a href="/" id="logo" title="Return to the Literary Kicks home page" class="active"><img typeof="foaf:Image" src="http://www.litkicks.com/sites/default/files/paularoid217.jpg" alt="Literary Kicks" /></a>
+            </td>
+            <td>
+              <h1 class="site-name"><a href="/" title="Return to the Literary Kicks home page"><span>Literary<br />Kicks</span></a></h1>
+            </td>
+          </tr>
+        </table>
+
         </div>
       </div>
       <!-- end of wide way -->
@@ -154,7 +158,7 @@
     </div>
 
   </div>
-</header>
+</div><!--//header-->
 
 <div class="main-container container">
 

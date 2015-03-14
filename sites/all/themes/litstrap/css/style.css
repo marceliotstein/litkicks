@@ -2,6 +2,13 @@
 /* custom CSS for literary kicks litmega drupal 7 */
 /**************************************************/
 
+.lkwidetoplinks {
+  width: 100%;
+}
+
+.lkwidetoplinks-td {
+  text-align: right;
+}
 .wide-topline {
   border-width: 1px;
   border-style: dotted;
@@ -14,10 +21,6 @@
   border-style: dotted;
   border-color: green;
   text-align: right;
-}
-
-.branding-linkbox {
-  /*float: right;*/
 }
 
 body {
