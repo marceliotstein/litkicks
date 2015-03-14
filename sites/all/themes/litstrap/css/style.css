@@ -2,28 +2,68 @@
 /* custom CSS for literary kicks litmega drupal 7 */
 /**************************************************/
 
+.wide-topline {
+  border-width: 1px;
+  border-style: dotted;
+  border-color: blue;
+  padding: 10px;
+}
+
+.branding-links {
+  border-width: 1px;
+  border-style: dotted;
+  border-color: green;
+  text-align: right;
+}
+
+.branding-linkbox {
+  /*float: right;*/
+}
+
 body {
    font: 13.5px/1.5 Trebuchet MS, Helvetica, Arial, sans-serif;
    background-color: #e3e3e3;
 }
 
-.lktoptable {
+.lknarrowtable {
   /*
   border-width: 1px;
   border-style: dotted;
   border-color: green;
   */
+  width: 100%;
   height: 153px;
 }
 
-.lktoptable-title {
+.lknarrowtable-title {
   text-align: center;
   vertical-align: middle;
 }
 
+.lknarrowtable-menu {
+  text-align: right;
+  vertical-align: top;
+}
+
+.lkwidetable {
+  width: 100%;
+  height: 217px;
+  border-width: 1px;
+  border-style: dotted;
+  border-color: green;
+}
+
+.lkwidetable-logo {
+  float: right;
+}
+
+.lkwidetable-title {
+  float: left;
+}
+
 .navbar-default .navbar-brand {
   font-family: helvetica, arial, sans-serif;
-  font-size: 61px;
+  font-size: 3em;
   font-weight: bold;
   color: #006f3f;
 }
