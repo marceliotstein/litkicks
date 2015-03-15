@@ -19,7 +19,7 @@ function lktaxonomy_block_view($delta = '') {
         }
 
         $sourcenid = get_nid_from_alias($sourcepath);
-        $result = lktaxonomy_related_stories($sourcenid);     
+        $result = lktaxonomy_related_stories($sourcenid);
         $items = array();
 
         $rownum = 0;
@@ -38,9 +38,9 @@ function lktaxonomy_block_view($delta = '') {
              $fullbody = $row->body_summary;
              $bodysplit = explode("<!--break-->",$fullbody);
              $body = $bodysplit[0];
-          } 
+          }
           $author = $thisnode->name;
-          $num_comments = $thisnode->comment_count; 
+          $num_comments = $thisnode->comment_count;
           $tax_topic = "tax";
 
           $dek = "";
@@ -50,7 +50,7 @@ function lktaxonomy_block_view($delta = '') {
 
           $story_image = "";
           if (!empty($thisnode->field_story_image)) {
-             $story_image = "<img src=\"/sites/default/files/" . $thisnode->field_story_image['und'][0]['filename'] . 
+             $story_image = "<img src=\"/sites/default/files/" . $thisnode->field_story_image['und'][0]['filename'] .
                             "\" alt=\"" . $thisnode->field_story_image['und'][0]['alt'] . "\" />";
           }
 
@@ -76,9 +76,9 @@ function lktaxonomy_block_view($delta = '') {
           $blockcontent .= "</div>";
 
         }
-        
-        // write data to cache 
-       
+
+        // write data to cache
+
         if ($user->uid==0) {
            $expire = time() + (60 * 360); // cache for six hours
            cache_set($cid, $blockcontent, 'cache', $expire);
@@ -98,7 +98,7 @@ function lktaxonomy_all_select(){
   $end_time = time();
 
   $offset = 8;
-  $query = "select n.nid, n.vid, n.title, n.created 
+  $query = "select n.nid, n.vid, n.title, n.created
             from node_counter nc, node n, field_revision_body frb
             where nc.nid = n.nid
             and n.nid = frb.entity_id
@@ -108,7 +108,7 @@ function lktaxonomy_all_select(){
             and n.status = 1
             order by nc.totalcount desc limit 10 offset " . $offset;
   $result = db_query($query);
-  return $result;  
+  return $result;
 }
 
 // retrieve related nids based on all taxonomy terms in topic (tid 1) vocabulary
@@ -121,7 +121,7 @@ function lktaxonomy_related_stories($sourcenid) {
                and n.status = 1
                and ti.tid in (select ti.tid from taxonomy_index ti, taxonomy_term_data ttd
                               where ti.tid = ttd.tid
-                              and ttd.vid = 1 
+                              and ttd.vid = 1
                               and ti.nid = " . $sourcenid . ")
                and ti.nid in (select entity_id from field_revision_field_dek)
                and ti.nid in (select entity_id from field_revision_field_story_image)
@@ -137,12 +137,12 @@ function lktaxonomy_related_stories($sourcenid) {
   $num_nodes = $result->rowCount();
   print "<!-- taxonomy related stories count = " . $num_nodes . "-->";
 
-  // if no taxonomy related stories found, we're probably looking at an fbitem node which 
+  // if no taxonomy related stories found, we're probably looking at an fbitem node which
   // has no taxonomy. in this case, show most popular recent blog posts.
   if ($num_nodes<1) {
     $result = lktaxonomy_all_latest_popular();
   }
-  return $result;  
+  return $result;
 }
 
 // simple retrieve from a preset list of nids
@@ -154,7 +154,7 @@ function lktaxonomy_all_nid(){
   $end_time = time();
 
   // 2828 is "growing up with litkicks" blog post
-  $query = "select n.nid, n.vid, n.title, n.created 
+  $query = "select n.nid, n.vid, n.title, n.created
             from node n where n.nid = 2828
             order by n.created desc";
         //from node n where n.nid in (2293,2279, 2268,2267,2264,2261,2257,2254,2244,2250,2248)
@@ -166,7 +166,7 @@ function lktaxonomy_all_nid(){
         //from node n where n.nid in (1574, 2163, 1752, 2162, 2103, 2122, 2170, 2168, 2175, 1675, 2167)
         //from node n where n.nid in (2122, 1675, 1727, 2145, 2156, 2168, 2180, 2123)";
   $result = db_query($query);
-  return $result;  
+  return $result;
 }
 
 // simple retrieve that gets nodes by date
@@ -179,14 +179,14 @@ function lktaxonomy_all_latest(){
   $query = db_select('node', 'n')
     ->fields('n', array('nid', 'vid', 'title', 'created'))
     ->condition('status', 1) //Published.
-    ->condition('type', "story") 
+    ->condition('type', "story")
     ->condition('created', array($start_time, $end_time), 'BETWEEN')
     ->orderBy('created', 'DESC') //Most recent first.
-    ->execute(); 
-  return $query;  
+    ->execute();
+  return $query;
 }
 
-// variation on lktaxonomy_all_latest() that selects by popularity order 
+// variation on lktaxonomy_all_latest() that selects by popularity order
 // from a longer interval of recent articles
 
 function lktaxonomy_all_latest_popular(){
@@ -197,23 +197,23 @@ function lktaxonomy_all_latest_popular(){
   $query = "SELECT n.nid AS nid, n.vid AS vid, n.title AS title, n.created AS created
             FROM node n
             JOIN node_counter nc ON nc.nid = n.nid
-            WHERE (status = '1') AND (type = 'story') AND (created BETWEEN '" . $start_time . "' AND '" . $end_time . "') 
+            WHERE (status = '1') AND (type = 'story') AND (created BETWEEN '" . $start_time . "' AND '" . $end_time . "')
             ORDER BY nc.daycount DESC
             LIMIT 12 OFFSET 0";
   $result = db_query($query);
-  return $result;  
+  return $result;
 
   //$query = db_select('{node}', 'n');
   //$query->join('{node_counter}','nc','nc.nid = n.nid');
   //$query->fields('n', array('nid', 'vid', 'title', 'created'))
   //  ->condition('status', 1) //Published.
-  //  ->condition('type', "story") 
+  //  ->condition('type', "story")
   //  ->condition('created', array($start_time, $end_time), 'BETWEEN')
   //  ->orderBy('nc.daycount', 'DESC') //Most popular first.
   //  ->range(0,12)
-  //  ->execute(); 
+  //  ->execute();
   //  dpq($query);
-  //return $query;  
+  //return $query;
 }
 
 function lktaxonomy_block_info() {
@@ -230,7 +230,7 @@ function lktaxonomy_help($path, $arg) {
       return '<p>' . t("Select related articles for a node based on all taxonomy terms") . '</p>';
       break;
   }
-} 
+}
 
 // get nid from path
 
@@ -267,15 +267,15 @@ function lktaxonomy_series_links($nid) {
     // series vocabulary is hardcoded as 3
     //
     $seriesvid = 3;
-    if ($enable_series_links) { 
-       $query1 = "SELECT td.tid, td.name FROM taxonomy_term_data td, taxonomy_index ti WHERE td.tid = ti.tid AND td.vid = " . 
+    if ($enable_series_links) {
+       $query1 = "SELECT td.tid, td.name FROM taxonomy_term_data td, taxonomy_index ti WHERE td.tid = ti.tid AND td.vid = " .
                  $seriesvid . " AND ti.nid = " . $nid;
        $result1 = db_query($query1);
        $seriestid = 0;
        foreach ($result1 as $thisterm) {
           $seriestid = $thisterm->tid;
           $seriesname = $thisterm->name;
-          // 
+          //
           // a few more hard-coded taxonomy values
           //
           $memoirtid = 89;
@@ -295,8 +295,8 @@ function lktaxonomy_series_links($nid) {
           }
           $serieslink = "<a href=\"" . $seriespath . "\">" . $seriesname . "</a>";
        }
-       if ($seriestid > 0) { 
-          $query2 = "SELECT n.nid, n.title FROM node n, taxonomy_index ti, node n2 WHERE n.nid = ti.nid AND ti.tid = " . 
+       if ($seriestid > 0) {
+          $query2 = "SELECT n.nid, n.title FROM node n, taxonomy_index ti, node n2 WHERE n.nid = ti.nid AND ti.tid = " .
                     $seriestid . " AND n.created > n2.created AND n.status = 1 AND n2.nid = " . $nid . " ORDER BY n.created LIMIT 1";
           $result2 = db_query($query2);
           $nextnid = 0;
@@ -307,7 +307,7 @@ function lktaxonomy_series_links($nid) {
              $nextlink = l($nexttitle,$thispathalias);
              $slinx .= "The next post in the series is <b>" . $nextlink . "</b>. ";
           }
-          $query3 = "SELECT n.nid, n.title FROM node n, taxonomy_index ti, node n2 WHERE n.nid = ti.nid AND ti.tid = " . 
+          $query3 = "SELECT n.nid, n.title FROM node n, taxonomy_index ti, node n2 WHERE n.nid = ti.nid AND ti.tid = " .
                     $seriestid . " AND n.created < n2.created AND n.status = 1 AND n2.nid = " . $nid . " ORDER BY n.created DESC LIMIT 1";
           $result3 = db_query($query3);
           $prevnid = 0;
@@ -321,10 +321,10 @@ function lktaxonomy_series_links($nid) {
           $slinx .= "</i>";
        }
     }
-    // write data to cache 
-       
+    // write data to cache
+
     if ($user->uid==0) {
-        $expire = time() + (60 * 360); // cache for six hours 
+        $expire = time() + (60 * 360); // cache for six hours
         cache_set($cid, $slinx, 'cache', $expire);
     }
     return($slinx);
