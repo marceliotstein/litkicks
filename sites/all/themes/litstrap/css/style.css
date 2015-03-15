@@ -2,6 +2,24 @@
 /* custom CSS for literary kicks litmega drupal 7 */
 /**************************************************/
 
+/* left sidebar styles */
+
+.region-sidebar-first {
+  width: 180px;
+  padding: 10px;
+}
+
+.block-search {
+  padding-bottom: 12px;
+}
+
+/* sitewide styles */
+
+body {
+   font: 13.5px/1.5 Trebuchet MS, Helvetica, Arial, sans-serif;
+   background-color: #e3e3e3;
+}
+
 .lkflush {
   margin: 0px;
   padding: 0px;
@@ -19,6 +37,33 @@
 
 a, a:link, a:visited, a:hover, a:active {
   text-decoration: none;
+}
+
+/* header styles */
+
+.lksitetitle {
+  font-family: helvetica, arial, sans-serif;
+  font-weight: bold;
+  color: #006f3f;
+  text-decoration: none;
+}
+
+a.lksitetitle,
+a.lksitetitle:link,
+a.lksitetitle:visited,
+a.lksitetitle:hover,
+a.lksitetitle:active {
+  color: #006f3f;
+}
+
+.lksitetitle-narrow {
+  font-size: 3em;
+  padding-left: 12px;
+}
+
+.lksitetitle-wide {
+  font-size: 5em;
+  line-height: .9em;
 }
 
 .lkwidetoplinks {
@@ -47,105 +92,40 @@ a, a:link, a:visited, a:hover, a:active {
   color: #000000;
 }
 
-body {
-   font: 13.5px/1.5 Trebuchet MS, Helvetica, Arial, sans-serif;
-   background-color: #e3e3e3;
-}
-
-.lknarrowtable {
+.lktable-narrow {
   width: 100%;
   height: 153px;
   padding-bottom: 20px;
 }
 
-.lknarrowtable-title {
-  text-align: center;
+.lklogo-narrow {
+  width: 234px;
+}
+
+.lksitetitle-td-narrow {
+  text-align: left;
   vertical-align: middle;
 }
 
-.lknarrowtable-menu {
+.lksitetitle-td-wide {
+  float: left;
+}
+
+.lkmenubars {
   text-align: right;
   vertical-align: top;
 }
 
-.lkwidetable {
+.lktable-wide {
   width: 100%;
   height: 217px;
 }
 
-.lkwidetable-logo {
+.lklogo-wide {
   float: right;
 }
 
-.lkwidetable-title {
-  float: left;
-}
-
-.lknarrow-sitetitle {
-  font-family: helvetica, arial, sans-serif;
-  font-size: 3em;
-  font-weight: bold;
-  color: #006f3f;
-  text-decoration: none;
-}
-
-.lkwide-sitetitle {
-  font-family: helvetica, arial, sans-serif;
-  font-size: 5em;
-  font-weight: bold;
-  color: #006f3f;
-  text-decoration: none;
-  line-height: .9em;
-}
-
-a:active {
-  text-decoration: none;
-  color: #006f3f;
-}
-
-/*
-.navbar-header {
-  vertical-align: middle;
-  height: 153px;
-  padding: 0px;
-  margin: 0px;
-}
-
-.navbar.container {
-  margin: 0px;
-  padding: 0px;
-}
-
-.header-logo, .header-title {
-  float: left;
-  height: 153px;
-  line-height: 130px;
-  padding: 0px
-  margin: 0px;
-  vertical-align: middle;
-}
-
-.navbar-btn {
-  margin: 0px;
-}
-
-
-/*
-
-a, a:link, a:visited {
-  color: #503077;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #aaaa7f;
-  text-decoration: none;
-}
-
-a:active {
-  color: #55554f;
-  text-decoration: none;
-}
+/* comment styles */
 
 div#commentintro {
    padding-top: 18px;
@@ -188,4 +168,3 @@ div#comments article {
 #readmorethoughts, #readmorethoughts a {
    float: right;
 }
-*/

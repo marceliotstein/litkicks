@@ -78,17 +78,17 @@
     <div class="navbar-header lkflush row col-xs-12">
       <!-- narrow way -->
       <div class="lkflush row col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
-        <table class="lknarrowtable">
+        <table class="lktable-narrow">
           <tr>
-            <td class="lknarrowtable-logo">
+            <td class="lklogo-narrow">
               <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
                 <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
               </a>
             </td>
-            <td class="lknarrowtable-title">
-              <a class="lknarrow-sitetitle" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">Literary Kicks</a>
+            <td class="lksitetitle-td-narrow">
+              <a class="lksitetitle lksitetitle-narrow" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">Literary Kicks</a>
             </td>
-            <td class="lknarrowtable-menu">
+            <td class="lkmenubars">
               <div class="dropdown pull-right">
                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdown1" data-toggle="dropdown" aria=expanded="true">
                   <span class="glyphicon glyphicon-align-justify"></span>
@@ -140,13 +140,13 @@
             </td>
           </tr>
         </table>
-        <table class="lkwidetable">
+        <table class="lktable-wide">
           <tr>
-            <td class="lkwidetable-logo">
+            <td class="lklogo-wide">
               <a href="/" id="logo" title="Return to the Literary Kicks home page" class="active"><img typeof="foaf:Image" src="http://www.litkicks.com/sites/default/files/paularoid217.jpg" alt="Literary Kicks" /></a>
             </td>
             <td>
-              <a class="lkwide-sitetitle" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">Literary<br />Kicks</a>
+              <a class="lksitetitle lksitetitle-wide" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">Literary<br />Kicks</a>
               </td>
           </tr>
         </table>
