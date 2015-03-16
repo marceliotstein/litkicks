@@ -73,6 +73,12 @@
 * @ingroup themeable
 */
 ?>
+<?php
+  global $base_url;
+  $filebase = $base_url . "/sites/default/files";
+  $themebase = $base_url . "/sites/all/themes/litstrap";
+  $themeimgbase = $themebase . "/images";
+?>
 <div class="lknavbar">
   <div class="lkunpad container">
     <div class="navbar-header lkflush row col-xs-12">
@@ -122,19 +128,19 @@
             <td class="lkwidetoplinks-td">
               <div class="branding-links">
                 <span class="branding-linkbox">
-                  <a href="/Archives">Archives (1994 to 2015)</a> <img src="/litkicks/sites/all/themes/litstrap/images/lkicon24.png" />
+                  <a href="/Archives">Archives (1994 to 2015)</a> <img src="<?php print $themeimgbase ?>/lkicon24.png" />
                 </span>
                 <span class="branding-linkbox">
-                  <a href="http://www.facebook.com/litkicks">Facebook</a> <img src="/litkicks/sites/all/themes/litstrap/images/fbicon24.png" />
+                  <a href="http://www.facebook.com/litkicks">Facebook</a> <img src="<?php print $themeimgbase ?>/fbicon24.png" />
                 </span>
                 <span class="branding-linkbox">
-                  <a href="http://twitter.com/asheresque">Twitter</a> <img src="/litkicks/sites/all/themes/litstrap/images/twicon24.png" />
+                  <a href="http://twitter.com/asheresque">Twitter</a> <img src="<?php print $themeimgbase ?>/twicon24.png" />
                 </span>
                 <span class="branding-linkbox">
-                  <a href="http://feeds.feedburner.com/LiteraryKicks">Subscribe</a> <img src="/litkicks/sites/all/themes/litstrap/images/rsicon24.png" />
+                  <a href="http://feeds.feedburner.com/LiteraryKicks">Subscribe</a> <img src="<?php print $themeimgbase ?>/rsicon24.png" />
                 </span>
                 <span class="branding-linkbox">
-                  <a href="/AboutUs">About Litkicks</a> <img src="/litkicks/sites/all/themes/litstrap/images/laicon24.png" />
+                  <a href="/AboutUs">About Litkicks</a> <img src="<?php print $themeimgbase ?>/laicon24.png" />
                 </span>
               </div>
             </td>

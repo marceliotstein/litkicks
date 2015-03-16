@@ -2,6 +2,8 @@
 
 function lktaxonomy_block_view($delta = '') {
   global $user;
+  global $base_url;
+  $filebase = $base_url . "/sites/default/files";
   switch($delta) {
     case 'lktaxonomy':
 
@@ -50,7 +52,7 @@ function lktaxonomy_block_view($delta = '') {
 
           $story_image = "";
           if (!empty($thisnode->field_story_image)) {
-             $story_image = "<img src=\"/sites/default/files/" . $thisnode->field_story_image['und'][0]['filename'] .
+             $story_image = "<img src=\"" . $filebase . "/". $thisnode->field_story_image['und'][0]['filename'] .
                             "\" alt=\"" . $thisnode->field_story_image['und'][0]['alt'] . "\" />";
           }
 
