@@ -4,6 +4,21 @@
 
 /* left sidebar styles */
 
+.article-by-line,
+.article-by-line a {
+   padding-top: 5px;
+   padding-bottom: 5px;
+}
+
+.article-tax-line,
+.article-tax-line a {
+   padding-top: 5px;
+   padding-bottom: 12px;
+   font-family: Verdana, Georgia, serif;
+   font-variant: small-caps;
+   line-height: .86em;
+}
+
 .lksideleft {
   margin: 0px;
   padding: 0px;
@@ -269,8 +284,36 @@ body {
   border-color: blue;
 }
 
-a, a:link, a:visited, a:hover, a:active {
+.lkheadline {
+  font-family: helvetica, arial, sans-serif;
+  color: black;
+  font-size: 35px;  
+}
+
+.lkheadline a,
+.lkheadline a:link,
+.lkheadline a:visited,
+.lkheadline a:active {
   text-decoration: none;
+  color: black;
+}
+
+.lkheadline a:hover {
+  text-decoration: none;
+  color: green;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #504080;
+}
+
+a:hover {
+  text-decoration: none;
+  color: green;
 }
 
 /* header styles */

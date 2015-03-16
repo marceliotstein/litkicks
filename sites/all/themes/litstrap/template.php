@@ -13,4 +13,3 @@ function litstrap_preprocess_node(&$variables, $hook) {
   hide($variables['content']['taxonomy_vocabulary_5']);
   hide($variables['content']['taxonomy_vocabulary_6']);
 }
-
