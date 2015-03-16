@@ -80,7 +80,7 @@
   $themeimgbase = $themebase . "/images";
 ?>
 <div class="lknavbar">
-  <div class="lkunpad container">
+  <div class="lkunpad container-fluid">
     <div class="navbar-header lkflush row col-xs-12">
       <!-- narrow way -->
       <div class="lkflush row col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
@@ -179,7 +179,7 @@
   <div class="row">
 
     <?php if (!empty($page['sidebar_first'])): ?>
-      <aside class="col-sm-3" role="complementary">
+      <aside class="col-sm-3 lksideleft" role="complementary">
         <?php print render($page['sidebar_first']); ?>
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>

@@ -4,14 +4,29 @@
 
 /* left sidebar styles */
 
+.lksideleft {
+  margin: 0px;
+  padding: 0px;
+}
+
 .region-sidebar-first {
-  width: 180px;
-  padding: 10px;
+  text-align: center;
+  padding: 10px
+  margin: 0px;
   background-color: transparent;
 }
 
 .block-search {
   padding-bottom: 12px;
+  text-align: center;
+}
+
+.form-search input {
+  border-radius: 12px;
+}
+
+.form-search button {
+  border-radius: 12px;
 }
 
 /* sidebar feature styles */
