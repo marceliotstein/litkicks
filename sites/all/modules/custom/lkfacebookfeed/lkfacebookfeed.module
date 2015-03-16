@@ -2,7 +2,7 @@
 //
 // facebook page integration for litkicks
 //
-// to get access token: 
+// to get access token:
 // https://graph.facebook.com/oauth/authorize?type=user_agent&client_id=443851599038373&redirect_uri=http%3A%2F%2Fwww.litkicks.com&scope=read_stream,offline_access
 //
 //
@@ -33,7 +33,7 @@ function lkfacebookfeed_block_view($delta = '') {
            return $block;
         }
 
-        $result = lkfacebookfeed_nodes();     
+        $result = lkfacebookfeed_nodes();
         $items = array();
 
         $rownum = 0;
@@ -42,7 +42,7 @@ function lkfacebookfeed_block_view($delta = '') {
           $nid = $nodedata->nid;
           $thisnode = node_load($nid);
           $vid = $nodedata->vid;
-    
+
           $fbtgtlink = null;
           if (!empty($thisnode->field_target_link)) {
             $fbtgt = $thisnode->field_target_link['und'][0]['value'];
@@ -59,11 +59,18 @@ function lkfacebookfeed_block_view($delta = '') {
           //   $fullbody = $row->body_summary;
           //   $bodysplit = explode("<!--break-->",$fullbody);
           //   $body = $bodysplit[0];
-          //} 
+          //}
 
           $story_image = "";
           if (!empty($thisnode->field_little_picture)) {
-             $story_image = "<center>" . $thisnode->field_little_picture['und'][0]['value'] . "</center>";
+            // quick and dirty relativization
+            global $base_url;
+            $abs_img_url = $thisnode->field_little_picture['und'][0]['value'];
+            $abs_exp = explode("/sites/default/files",$abs_img_url);
+            if (!empty($abs_exp[1])) {
+              $rel_img_url = "<img src=\"" . $base_url . "/sites/default/files" . $abs_exp[1];
+            }
+            $story_image = "<center>" . $rel_img_url . "</center>";
           }
 
           $blockcontent .= "<div class=\"lkselect-fb-row lkselect-fb-row-" . $rownum . "\">";
@@ -83,8 +90,8 @@ function lkfacebookfeed_block_view($delta = '') {
 
         }
 
-        // write data to cache 
-       
+        // write data to cache
+
         if ($user->uid==0) {
            $expire = time() + (60 * 360); // cache for six hours
          /////cache_set($cid, $blockcontent, 'cache', $expire);
@@ -96,7 +103,7 @@ function lkfacebookfeed_block_view($delta = '') {
   }
 }
 
-// retrieve current facebook feed nodes 
+// retrieve current facebook feed nodes
 
 function lkfacebookfeed_nodes() {
   $query = "select n.nid, n.vid, n.title, n.created from node n
@@ -107,7 +114,7 @@ function lkfacebookfeed_nodes() {
             limit 10";
   //print "<!--" . $query . "-->";
   $result = db_query($query);
-  return $result;  
+  return $result;
 }
 
 // block info
@@ -158,7 +165,7 @@ function fb_feed() {
   $ret = "GRAPH API TEST<br />";
   $ret .= "Your Facebook ID is " . $fbdata['id'] . "<br />";
   $ret .= "Your Facebook Name is " . $fbdata['name'] . "<br />";
-  $postdata = $fbdata['posts']['data']; 
+  $postdata = $fbdata['posts']['data'];
   $postcount = 0;
   foreach ($postdata as $thispost) {
     $type = $thispost['type'];
@@ -179,7 +186,7 @@ function fb_feed() {
            $targetlink = $thispost['link'];
 print "TARGET LINK IS " . $targetlink;
         }
- 
+
         // try to get original (non-FB) image
         $picsrcexp = explode("url=",$picture);
         if (isset($picsrcexp[1])) {
@@ -223,7 +230,7 @@ print "TARGET LINK IS " . $targetlink;
       if ((!empty($message_title)) &&
           (!empty($post_id))) {
         $ret .= "<b>" . $message_title . "</b><br />" . $message . "<br />" . $post_id . "<br />" . $picsrc . "<br />" . $bigpicsrc . "<br />";
- 
+
         // is there already an existing node with this facebook post id?
 
         $fbid_found = false;
@@ -242,7 +249,7 @@ print "TARGET LINK IS " . $targetlink;
 
         $newnode = new stdClass();
         $newnode->type = "fbitem";
-        $newnode->title = $message_title;      
+        $newnode->title = $message_title;
         $newnode->language = LANGUAGE_NONE;
         $newnode->status = 0; /* not published */
         $newnode->promote = 0; /* not promoted */
@@ -250,9 +257,9 @@ print "TARGET LINK IS " . $targetlink;
         $newnode->uid = 3; /* uid 3 = Levi Asher */
         $newnode->path = array('alias' => $newpath);
 
-        $newnode->body[LANGUAGE_NONE][0]['value']  = $message;      
-        $newnode->body[LANGUAGE_NONE][0]['summary']  = $message;      
-        $newnode->body[LANGUAGE_NONE][0]['format']  = 1; /* 1 = filtered html */      
+        $newnode->body[LANGUAGE_NONE][0]['value']  = $message;
+        $newnode->body[LANGUAGE_NONE][0]['summary']  = $message;
+        $newnode->body[LANGUAGE_NONE][0]['format']  = 1; /* 1 = filtered html */
 
         $newnode->field_facebook_post_id[LANGUAGE_NONE][0]['value'] = $post_id;
         $newnode->field_target_link[LANGUAGE_NONE][0]['value'] = $targetlink;
@@ -266,11 +273,11 @@ print "TARGET LINK IS " . $targetlink;
         }
       }
     }
-  
+
     if (!empty($thispost['likes'])) {
       $likes = $thispost['likes']['data'];
       foreach ($likes as $thislike) {
-        $ret .= " --> LIKED BY " . $thislike['name'] . "<br />"; 
+        $ret .= " --> LIKED BY " . $thislike['name'] . "<br />";
       }
     }
 
@@ -279,10 +286,10 @@ print "TARGET LINK IS " . $targetlink;
       foreach ($comments as $thiscomment) {
         $commentname = $thiscomment['from']['name'];
         $commentmsg = $thiscomment['message'];
-        $ret .= " --> COMMENT BY " . $commentname . ": " . $commentmsg . "<br />"; 
+        $ret .= " --> COMMENT BY " . $commentname . ": " . $commentmsg . "<br />";
       }
     }
-    
+
     $postcount++;
     if ($postcount>10) {
       break;

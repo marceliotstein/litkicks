@@ -7,6 +7,7 @@
 .region-sidebar-first {
   width: 180px;
   padding: 10px;
+  background-color: transparent;
 }
 
 .block-search {
