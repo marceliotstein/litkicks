@@ -317,6 +317,12 @@ a.lksitetitle:active {
   padding-bottom: 20px;
 }
 
+.logo img {
+  border-width: 3px;
+  border-color: black;
+  border-style: solid;
+}
+
 .lklogo-narrow {
   width: 234px;
 }
