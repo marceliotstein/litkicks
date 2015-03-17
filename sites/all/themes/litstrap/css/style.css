@@ -3,12 +3,11 @@
 /**************************************************/
 
 .lkheader-narrow {
-  border-width: 2px;
-  border-style: solid;
-  border-color: black;
-  border-radius: 12px;
-  padding: 12px;
-  background-color: #ffffff;
+  /*border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  padding-top: 22px;*/
+  padding-bottom: 22px;
 }
 
 /* left sidebar styles */
@@ -295,8 +294,8 @@ body {
 
 .lkheadline {
   font-family: helvetica, arial, sans-serif;
-  color: black;
   font-size: 35px;
+  color: black;
 }
 
 .lkheadline a,
@@ -328,9 +327,9 @@ a:hover {
 /* header styles */
 
 .lksitetitle {
-  font-family: helvetica, arial, sans-serif;
-  font-weight: bold;
-  color: #006f3f;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  color: #002f2f;
   text-decoration: none;
 }
 
@@ -339,17 +338,17 @@ a.lksitetitle:link,
 a.lksitetitle:visited,
 a.lksitetitle:hover,
 a.lksitetitle:active {
-  color: #006f3f;
+  color: #002f2f;
 }
 
 .lksitetitle-narrow {
-  font-size: 3em;
+  font-size: 5em;
   padding-left: 12px;
 }
 
 .lksitetitle-wide {
   font-size: 5em;
-  line-height: .9em;
+  padding-left: 12px;
 }
 
 .lkwidetoplinks {
@@ -391,7 +390,11 @@ a.lksitetitle:active {
 }
 
 .lklogo-narrow {
-  min-width: 234px;
+  width: 234px;
+}
+
+.lklogo-wide {
+  width: 234px;
 }
 
 .lksitetitle-td-narrow {
@@ -400,7 +403,8 @@ a.lksitetitle:active {
 }
 
 .lksitetitle-td-wide {
-  float: left;
+  text-align: left;
+  vertical-align: middle;
 }
 
 .lkmenubars {
@@ -411,10 +415,6 @@ a.lksitetitle:active {
 .lktable-wide {
   width: 100%;
   height: 217px;
-}
-
-.lklogo-wide {
-  float: right;
 }
 
 /* comment styles */

@@ -83,10 +83,12 @@ $themeimgbase = $themebase . "/images";
           <table class="lktable-wide">
             <tr>
               <td class="lklogo-wide">
-                <a href="/" id="logo" title="Return to the Literary Kicks home page" class="active"><img typeof="foaf:Image" src="http://www.litkicks.com/sites/default/files/paularoid217.jpg" alt="Literary Kicks" /></a>
+                <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+                  <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+                </a>
               </td>
-              <td>
-                <a class="lksitetitle lksitetitle-wide" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">Literary<br />Kicks</a>
+              <td class="lksitetitle-td-wide">
+                <a class="lksitetitle lksitetitle-wide" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">Literary Kicks</a>
               </td>
             </tr>
           </table>
