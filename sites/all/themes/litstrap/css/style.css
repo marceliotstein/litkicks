@@ -287,15 +287,6 @@ body {
    background-color: #e3e3e3;
 }
 
-.lkflush {
-  margin: 0px;
-  padding: 0px;
-}
-
-.lkunpad {
-  padding: 0px;
-}
-
 .lkborder {
   border-style: dashed;
   border-width: 1px;
@@ -389,8 +380,14 @@ a.lksitetitle:active {
 
 .lktable-narrow {
   width: 100%;
-  height: 153px;
-  padding-bottom: 20px;
+  height: 142px;
+  padding-bottom: 12px;
+}
+
+.lktable-wide {
+  width: 100%;
+  height: 142px;
+  padding-bottom: 12px;
 }
 
 .logo img {
@@ -400,11 +397,11 @@ a.lksitetitle:active {
 }
 
 .lklogo-narrow {
-  width: 234px;
+  width: 240px;
 }
 
 .lklogo-wide {
-  width: 234px;
+  width: 240px;
 }
 
 .lksitetitle-td-narrow {
@@ -422,10 +419,6 @@ a.lksitetitle:active {
   vertical-align: top;
 }
 
-.lktable-wide {
-  width: 100%;
-  height: 217px;
-}
 
 /* comment styles */
 

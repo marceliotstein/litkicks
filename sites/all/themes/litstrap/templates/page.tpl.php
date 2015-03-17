@@ -16,9 +16,9 @@ $themeimgbase = $themebase . "/images";
   </div>
 
   <div class="lktheater col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
-    <div class="row navbar-header lkflush col-xs-12">
+    <div class="row col-xs-12">
       <!-- narrow way -->
-      <div class="lkheader-narrow lkflush col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
+      <div class="lkheader-narrow col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
         <table class="lktable-narrow">
           <tr>
             <td class="lklogo-narrow">
@@ -99,7 +99,7 @@ $themeimgbase = $themebase . "/images";
     <!-- end of header -->
 
     <div class="row">
-      <aside class="col-sm-3 lksideleft" role="complementary">
+      <aside class="col-sm-3 lksideleft">
         <?php print render($page['sidebar_first']); ?>
       </aside>  <!-- /#sidebar-first -->
 
@@ -126,7 +126,7 @@ $themeimgbase = $themebase . "/images";
       </section>
 
       <!-- features in right nav for wide only -->
-      <aside class="hidden-xs hidden-sm col-md-3 col-lg-3 col-xl-3 lksidefeature" role="complementary">
+      <aside class="hidden-xs hidden-sm col-md-3 col-lg-3 col-xl-3 lksidefeature">
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
     </div>
@@ -138,7 +138,7 @@ $themeimgbase = $themebase . "/images";
       </aside>  <!-- /#sidebar-second -->
     </div>
 
-    <footer class="footer container">
+    <footer class="footer">
       <?php print render($page['footer']); ?>
     </footer>
 
