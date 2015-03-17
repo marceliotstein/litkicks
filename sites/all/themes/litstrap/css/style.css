@@ -2,6 +2,12 @@
 /* custom CSS for literary kicks litmega drupal 7 */
 /**************************************************/
 
+.lkcore-inner {
+  background-color: white;
+  border-radius: 12px;
+  margin-right: 12px;
+}
+
 .lkheader-narrow {
   /*border-bottom-width: 2px;
   border-bottom-style: solid;
@@ -34,7 +40,10 @@
 
 .region-sidebar-first {
   text-align: center;
-  padding: 10px
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   margin: 0px;
   background-color: transparent;
 }
@@ -42,6 +51,7 @@
 .block-search {
   padding-bottom: 12px;
   text-align: center;
+  max-width: 180px;
 }
 
 .form-search input {
