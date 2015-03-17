@@ -2,6 +2,15 @@
 /* custom CSS for literary kicks litmega drupal 7 */
 /**************************************************/
 
+.lkheader-narrow {
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 12px;
+  padding: 12px;
+  background-color: #ffffff;
+}
+
 /* left sidebar styles */
 
 .article-by-line,
@@ -287,7 +296,7 @@ body {
 .lkheadline {
   font-family: helvetica, arial, sans-serif;
   color: black;
-  font-size: 35px;  
+  font-size: 35px;
 }
 
 .lkheadline a,
@@ -382,7 +391,7 @@ a.lksitetitle:active {
 }
 
 .lklogo-narrow {
-  width: 234px;
+  min-width: 234px;
 }
 
 .lksitetitle-td-narrow {

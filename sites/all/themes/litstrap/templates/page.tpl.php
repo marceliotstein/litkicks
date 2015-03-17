@@ -17,7 +17,7 @@ $themeimgbase = $themebase . "/images";
     <div class="lknavbar container-fluid">
       <div class="navbar-header lkflush row col-xs-12">
         <!-- narrow way -->
-        <div class="lkflush row col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
+        <div class="lkheader-narrow lkflush row col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
           <table class="lktable-narrow">
             <tr>
               <td class="lklogo-narrow">
