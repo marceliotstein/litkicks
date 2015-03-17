@@ -2,18 +2,14 @@
 /* custom CSS for literary kicks litmega drupal 7 */
 /**************************************************/
 
+.lkheader {
+  padding-bottom: 12px;
+}
+
 .lkcore-inner {
   background-color: white;
   border-radius: 12px;
   margin-right: 12px;
-}
-
-.lkheader-narrow {
-  /*border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: black;
-  padding-top: 22px;*/
-  padding-bottom: 22px;
 }
 
 /* left sidebar styles */
@@ -33,25 +29,13 @@
    line-height: .86em;
 }
 
-.lksideleft {
-  margin: 0px;
-  padding: 0px;
-}
-
 .region-sidebar-first {
-  text-align: center;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  margin: 0px;
   background-color: transparent;
 }
 
 .block-search {
   padding-bottom: 12px;
-  text-align: center;
-  max-width: 180px;
+  max-width: 160px;
 }
 
 .form-search input {
@@ -60,6 +44,10 @@
 
 .form-search button {
   border-radius: 12px;
+}
+
+form#search-block-form {
+  width: 160px;
 }
 
 /* sidebar feature styles */

@@ -11,14 +11,14 @@ $themeimgbase = $themebase . "/images";
 ?>
 <div class="lkmain container-fluid">
 
-  <div class="lkbuffer-left hidden-xs hidden-sm hidden-md col-lg-1 col-xl-1">
+  <!--<div class="lkbuffer-left hidden-xs hidden-sm hidden-md col-lg-1 col-xl-1">
     &nbsp;
-  </div>
+  </div>-->
 
-  <div class="lktheater col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
-    <div class="row col-xs-12">
+  <div class="lktheater col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <div class="row lkheader">
       <!-- narrow way -->
-      <div class="lkheader-narrow col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
+      <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
         <table class="lktable-narrow">
           <tr>
             <td class="lklogo-narrow">
@@ -98,12 +98,12 @@ $themeimgbase = $themebase . "/images";
     </div>
     <!-- end of header -->
 
-    <div class="row">
-      <aside class="col-sm-3 lksideleft">
+    <div class="row lkmain">
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 col-xl-2 collksideleft centered-text">
         <?php print render($page['sidebar_first']); ?>
-      </aside>  <!-- /#sidebar-first -->
+      </div>  <!-- /#sidebar-first -->
 
-      <section class="col-xs-9 col-sm-9 col-md-6 col-lg-6 col-xl-6 lkcore">
+      <div class="col-xs-9 col-sm-9 col-md-6 col-lg-7 col-xl-7 lkcore">
         <div class="lkcore-inner">
           <a id="main-content"></a>
 
@@ -123,12 +123,12 @@ $themeimgbase = $themebase . "/images";
           <?php endif; ?>
           <?php print render($page['content']); ?>
         </div>
-      </section>
+      </div>
 
       <!-- features in right nav for wide only -->
-      <aside class="hidden-xs hidden-sm col-md-3 col-lg-3 col-xl-3 lksidefeature">
+      <div class="hidden-xs hidden-sm col-md-3 col-lg-3 col-xl-3 lksidefeature">
         <?php print render($page['sidebar_second']); ?>
-      </aside>  <!-- /#sidebar-second -->
+      </div>  <!-- /#sidebar-second -->
     </div>
 
     <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl lkbottomfeature">
@@ -144,7 +144,7 @@ $themeimgbase = $themebase . "/images";
 
   </div><!--theater-->
 
-  <div class="lkbuffer-left hidden-xs hidden-sm hidden-md col-lg-1 col-xl-1">
+  <!--<div class="lkbuffer-left hidden-xs hidden-sm hidden-md col-lg-1 col-xl-1">
     &nbsp;
-  </div>
+  </div>-->
 </div>
