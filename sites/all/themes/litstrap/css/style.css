@@ -72,25 +72,37 @@ form#search-block-form {
 
 /* feature styles for bottom features */
 
-.lkbottomfeature .node-title {
-  float: left;
+.lkbottomrow {
+  text-align: center;
 }
 
-.lkbottomfeature .storyimage {
-  float: right;
+.lkbottomfeature {
+   color: #000000;
+   background-color: #e3e3e3;
+   width: 500px;
+   margin: 0 auto;
 }
 
-.lkbottomfeature .dek {
-  float: left;
+.lkbottomfeature article {
+   padding: 8px;
+   border-radius: 12px;
+   background-color: #50a29a;
+   margin-bottom: 12px;
 }
 
-.lkbottomfeature #readmorethoughts {
-  float: left;
+.lkbottomfeature-title {
+  text-align: center:
 }
 
-.lkbottomfeature img {
-  width: 180px;
-  margin: 0 auto;
+.lkbottomfeature-td-img {
+  vertical-align: middle;
+  width: 50%;
+}
+
+.lkbottomfeature-td-words {
+  text-align: left;
+  vertical-align: top;
+  width: 50%;
 }
 
 .lkbottomfeature a,
@@ -112,22 +124,6 @@ form#search-block-form {
    font-variant: small-caps;
 }
 
-.lkbottomfeature {
-   color: #000000;
-   background-color: #e3e3e3;
-}
-
-.lkbottomfeature article {
-   padding: 8px;
-   border-radius: 12px;
-   background-color: #50a29a;
-   margin-bottom: 12px;
-}
-
-.lkbottomfeature .block {
-   padding: 4px;
-}
-
 .lkbottomfeature h2.node-title,
 .lkbottomfeature h2.node-title a {
    font-family: helvetica, arial, sans-serif;
@@ -137,17 +133,17 @@ form#search-block-form {
    padding: 6px;
 }
 
-.lkbottomfeature .storyimage {
-  width: 100%;
-  padding-left: 24px;
-  padding-bottom: 8px;
-}
-
 .lkbottomfeature .side-by-line,
 .lkbottomfeature .side-by-line a {
    font-family: tahoma, verdana, sans-serif;
    padding-top: 5px;
    padding-bottom: 5px;
+}
+
+.lkbottomfeature .readmorethoughts {
+   font-family: Verdana, Georgia, serif;
+   font-weight: bold;
+   font-variant: small-caps;
 }
 
 /* feature styles for right sidebar features */
@@ -197,6 +193,12 @@ form#search-block-form {
 
 .lksidefeature .block {
    padding: 4px;
+}
+
+.lksidefeature .readmorethoughts {
+   font-family: Verdana, Georgia, serif;
+   font-weight: bold;
+   font-variant: small-caps;
 }
 
 .lksidefeature .views-row-1 article .fb-side {
@@ -312,7 +314,7 @@ form#search-block-form {
    padding: 6px;
 }
 
-.storyimage {
+.lksidefeature .storyimage {
   width: 100%;
   padding-left: 24px;
   padding-bottom: 8px;

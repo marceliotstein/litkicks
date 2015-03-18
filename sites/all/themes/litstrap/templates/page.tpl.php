@@ -131,11 +131,11 @@ $themeimgbase = $themebase . "/images";
       </div>  <!-- /#sidebar-second -->
     </div>
 
-    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl lkbottomfeature">
-      <!-- features in bottom nav for narrow only -->
-      <aside>
-        <?php print render($page['sidebar_second']); ?>
-      </aside>  <!-- /#sidebar-second -->
+    <div class="row lkbottomrow col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl lkbottomfeature">
+        <!-- features in bottom nav for narrow only -->
+        <?php print render($page['highlighted']); ?>
+      </div>
     </div>
 
     <footer class="footer">

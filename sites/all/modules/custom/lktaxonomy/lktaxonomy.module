@@ -4,98 +4,176 @@ function lktaxonomy_block_view($delta = '') {
   global $user;
   global $base_url;
   $filebase = $base_url . "/sites/default/files";
-  switch($delta) {
-    case 'lktaxonomy':
+  $block['subject'] = "";
+  $blockcontent = "";
+  if (user_access('access content')) {
+    $sourcepath = request_path();
+    switch ($delta) {
+      case 'lktaxonomyside':  
 
+      // use cached data if available
+      $cid = "taxside:" . $sourcepath;
+      if ($cached = cache_get($cid,'cache')) {
+        $blockcontent = $cached->data;
+        $block['content'] = $blockcontent;
+        return $block;
+      }
+
+      $sourcenid = get_nid_from_alias($sourcepath);
+      $result = lktaxonomy_related_stories($sourcenid);
+      $items = array();
+
+      $rownum = 0;
+      foreach ($result as $nodedata){
+        $rownum++;
+        $nid = $nodedata->nid;
+        $thisnode = node_load($nid);
+        $vid = $nodedata->vid;
+        $date = format_date($nodedata->created);
+
+        $title = l($nodedata->title, 'node/' . $nid);
+
+        $nodepath = "/" . drupal_get_path_alias('node/' . $nid);
+        $result = db_query("select body_summary from field_revision_body where entity_id = " . $nid . " and revision_id = " . $vid);
+        foreach ($result as $row) {
+          $fullbody = $row->body_summary;
+          $bodysplit = explode("<!--break-->",$fullbody);
+          $body = $bodysplit[0];
+        }
+        $author = $thisnode->name;
+        $num_comments = $thisnode->comment_count;
+        $tax_topic = "tax";
+
+        $dek = "";
+        if (!empty($thisnode->field_dek)) {
+          $dek = $thisnode->field_dek['und'][0]['value'];
+        }
+
+        $story_image = "";
+        if (!empty($thisnode->field_story_image)) {
+          $story_image = "<img src=\"" . $filebase . "/". $thisnode->field_story_image['und'][0]['filename'] .
+          "\" alt=\"" . $thisnode->field_story_image['und'][0]['alt'] . "\" />";
+        }
+
+        $comment_string = "";
+        if ($num_comments=="1") {
+          $comment_string = "(1 comment)";
+        } else if ($num_comments!="0") {
+          $comment_string = "(" . $num_comments . " comments)";
+        }
+
+        $blockcontent .= "<div class=\"lkselect-row lkselect-row-" . $rownum . "\">";
+        $blockcontent .= "<article>";
+        $blockcontent .= "<h2 class=\"node-title\">" . $title . "</h2>";
+        $blockcontent .= "<div class=\"side-by-line\">by " . $author . " " . $date . "</div>";
+        //$blockcontent .= "<div class=\"side-tax-line\">" . $tax_topic . "</div>";
+
+        $blockcontent .= "<div class=\"storyimage\">" . $story_image . "</div>";
+        $blockcontent .= "<div class=\"dek\">" . $dek . "</div><br />";
+        //$blockcontent .= "<div class=\"body\">" . $body . "</div><br />";
+
+        $blockcontent .= "<div class=\"readmorethoughts\"><a href=\"" . $nodepath . "\">... Read more and add your thoughts " . $comment_string . "</a></div>";
+        $blockcontent .= "</article>";
+        $blockcontent .= "</div>";
+
+      }
+      if ($user->uid==0) {
+        $expire = time() + (60 * 360); // cache for six hours
+        cache_set($cid, $blockcontent, 'cache', $expire);
+      }
+      break;
+      case 'lktaxonomybottom':
       $block['subject'] = "";
       $blockcontent = "";
-      if (user_access('access content')) {
-        $sourcepath = request_path();
 
-        // use cached data if available
-        $cid = "sidebarstories:" . $sourcepath;
-        if ($cached = cache_get($cid,'cache')) {
-           $blockcontent = $cached->data;
-           $block['content'] = $blockcontent;
-           return $block;
+      // use cached data if available
+      $cid = "taxbottom:" . $sourcepath;
+      if ($cached = cache_get($cid,'cache')) {
+        $blockcontent = $cached->data;
+        $block['content'] = $blockcontent;
+        return $block;
+      }
+
+      $sourcenid = get_nid_from_alias($sourcepath);
+      $result = lktaxonomy_related_stories($sourcenid);
+      $items = array();
+
+      $rownum = 0;
+      foreach ($result as $nodedata) {
+        $rownum++;
+        $nid = $nodedata->nid;
+        $thisnode = node_load($nid);
+        $vid = $nodedata->vid;
+        $date = format_date($nodedata->created);
+
+        $title = l($nodedata->title, 'node/' . $nid);
+
+        $nodepath = "/" . drupal_get_path_alias('node/' . $nid);
+        $result = db_query("select body_summary from field_revision_body where entity_id = " . $nid . " and revision_id = " . $vid);
+        foreach ($result as $row) {
+          $fullbody = $row->body_summary;
+          $bodysplit = explode("<!--break-->",$fullbody);
+          $body = $bodysplit[0];
+        }
+        $author = $thisnode->name;
+        $num_comments = $thisnode->comment_count;
+        $tax_topic = "tax";
+
+        $dek = "";
+        if (!empty($thisnode->field_dek)) {
+          $dek = $thisnode->field_dek['und'][0]['value'];
         }
 
-        $sourcenid = get_nid_from_alias($sourcepath);
-        $result = lktaxonomy_related_stories($sourcenid);
-        $items = array();
-
-        $rownum = 0;
-        foreach ($result as $nodedata){
-          $rownum++;
-          $nid = $nodedata->nid;
-          $thisnode = node_load($nid);
-          $vid = $nodedata->vid;
-          $date = format_date($nodedata->created);
-
-          $title = l($nodedata->title, 'node/' . $nid);
-
-          $nodepath = "/" . drupal_get_path_alias('node/' . $nid);
-          $result = db_query("select body_summary from field_revision_body where entity_id = " . $nid . " and revision_id = " . $vid);
-          foreach ($result as $row) {
-             $fullbody = $row->body_summary;
-             $bodysplit = explode("<!--break-->",$fullbody);
-             $body = $bodysplit[0];
-          }
-          $author = $thisnode->name;
-          $num_comments = $thisnode->comment_count;
-          $tax_topic = "tax";
-
-          $dek = "";
-          if (!empty($thisnode->field_dek)) {
-             $dek = $thisnode->field_dek['und'][0]['value'];
-          }
-
-          $story_image = "";
-          if (!empty($thisnode->field_story_image)) {
-             $story_image = "<img src=\"" . $filebase . "/". $thisnode->field_story_image['und'][0]['filename'] .
-                            "\" alt=\"" . $thisnode->field_story_image['und'][0]['alt'] . "\" />";
-          }
-
-          $comment_string = "";
-          if ($num_comments=="1") {
-            $comment_string = "(1 comment)";
-          } else if ($num_comments!="0") {
-            $comment_string = "(" . $num_comments . " comments)";
-          }
-
-          $blockcontent .= "<div class=\"lkselect-row lkselect-row-" . $rownum . "\">";
-          $blockcontent .= "<article>";
-          $blockcontent .= "<h2 class=\"node-title\">" . $title . "</h2>";
-          $blockcontent .= "<div class=\"side-by-line\">by " . $author . " " . $date . "</div>";
-          //$blockcontent .= "<div class=\"side-tax-line\">" . $tax_topic . "</div>";
-
-          $blockcontent .= "<div class=\"storyimage\">" . $story_image . "</div>";
-          $blockcontent .= "<div class=\"dek\">" . $dek . "</div><br />";
-          //$blockcontent .= "<div class=\"body\">" . $body . "</div><br />";
-
-          $blockcontent .= "<div id=\"readmorethoughts\"><a href=\"" . $nodepath . "\">... Read more and add your thoughts " . $comment_string . "</a></div>";
-          $blockcontent .= "</article>";
-          $blockcontent .= "</div>";
-
+        $story_image = "";
+        if (!empty($thisnode->field_story_image)) {
+          $story_image = "<img class=\"img-responsive\" src=\"" . $filebase . "/". $thisnode->field_story_image['und'][0]['filename'] .
+          "\" alt=\"" . $thisnode->field_story_image['und'][0]['alt'] . "\" />";
         }
 
+        $comment_string = "";
+        if ($num_comments=="1") {
+          $comment_string = "(1 comment)";
+        } else if ($num_comments!="0") {
+          $comment_string = "(" . $num_comments . " comments)";
+        }
+
+        $blockcontent .= "<div class=\"lkselect-row lkselect-row-" . $rownum . "\">";
+        $blockcontent .= "<article>";
+        $blockcontent .= "<h2 class=\"lkbottomfeature-title\">" . $title . "</h2>";
+
+        $blockcontent .= "<table class=\"lkbottomfeature-table\"><tr>";
+        $blockcontent .= "<td class=\"lkbottomfeature-td-img\">";
+        $blockcontent .= "<div class=\"storyimage\">" . $story_image . "</div>";
+        $blockcontent .= "</td>";
+        $blockcontent .= "<td class=\"lkbottomfeature-td-words\">";
+        $blockcontent .= "<div class=\"side-by-line\">by " . $author . " " . $date . "</div>";
+        $blockcontent .= "<div class=\"dek\">" . $dek . "</div><br />";
+        $blockcontent .= "</td>";
+        $blockcontent .= "</tr></table>";
+
+        $blockcontent .= "<div class=\"readmorethoughts\"><a href=\"" . $nodepath . "\">... Read more and add your thoughts " . $comment_string . "</a></div>";
+
+        $blockcontent .= "</article>";
+        $blockcontent .= "</div>";
         // write data to cache
 
         if ($user->uid==0) {
-           $expire = time() + (60 * 360); // cache for six hours
-           cache_set($cid, $blockcontent, 'cache', $expire);
+          $expire = time() + (60 * 360); // cache for six hours
+          cache_set($cid, $blockcontent, 'cache', $expire);
         }
-
-        $block['content'] = $blockcontent;
       }
-      return $block;
+    }
   }
+
+  $block['content'] = $blockcontent;
+
+  return $block;
 }
 
 // simple retrieve that gets most popular nodes, randomized and offset
 
-function lktaxonomy_all_select(){
-  $today = getdate();
+function lktaxonomy_all_select() {
+  $today = gketdate();
   $start_time = mktime(0, 0, 0,$today['mon'],($today['mday'] - 12), $today['year']);
   $end_time = time();
 
@@ -219,8 +297,12 @@ function lktaxonomy_all_latest_popular(){
 }
 
 function lktaxonomy_block_info() {
-  $blocks['lktaxonomy'] = array(
-    'info' => t('Taxonomy Selection'), //The name that will appear in the block list.
+  $blocks['lktaxonomyside'] = array(
+    'info' => t('Taxonomy Selection Side'), //The name that will appear in the block list.
+    'cache' => DRUPAL_NO_CACHE, //Default
+  );
+  $blocks['lktaxonomybottom'] = array(
+    'info' => t('Taxonomy Selection Bottom'), //The name that will appear in the block list.
     'cache' => DRUPAL_NO_CACHE, //Default
   );
   return $blocks;
