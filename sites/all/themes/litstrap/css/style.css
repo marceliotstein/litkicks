@@ -51,25 +51,25 @@ form#search-block-form {
   width: 160px;
 }
 
-/* sidebar feature styles */
+/* feature styles for bottom features */
 
-.region-sidebar-second img {
+.lkbottomfeature img {
   width: 180px;
   margin: 0 auto;
 }
 
-.region-sidebar-second a,
-.region-sidebar-second a:link,
-.region-sidebar-second a:visited {
+.lkbottomfeature a,
+.lkbottomfeature a:link,
+.lkbottomfeature a:visited {
   color: #001010;
   text-decoration: none;
 }
 
-.region-sidebar-second .navsubmitted {
+.lkbottomfeature .navsubmitted {
    padding-bottom: 10px;
 }
 
-.region-sidebar-second h2 {
+.lkbottomfeature h2 {
    margin-bottom: 0px;
    font-family: Trebuchet MS, sans-serif;
    font-weight: bold;
@@ -77,7 +77,7 @@ form#search-block-form {
    font-variant: small-caps;
 }
 
-.region-sidebar-second {
+.lkbottomfeature {
    color: #000000;
    float: right;
    width: 252px;
@@ -86,7 +86,7 @@ form#search-block-form {
    margin-right: 0px;
 }
 
-.region-sidebar-second article {
+.lkbottomfeature article {
    width: 244px;
    float: right;
    padding: 8px;
@@ -96,102 +96,16 @@ form#search-block-form {
    border-radius: 12px;
 }
 
-.region-sidebar-second .block {
+.lkbottomfeature .block {
    padding: 4px;
 }
 
-.region-sidebar-second .views-row-1 article .fb-side {
-   background-color: #ffff00;
-}
-
-.region-sidebar-second .views-row-1 article,
-.region-sidebar-second .views-row-4 article,
-.region-sidebar-second .views-row-7 article,
-.region-sidebar-second .views-row-10 article,
-.region-sidebar-second .views-row-13 article {
+.lkbottomfeature article {
    background-color: #50a29a;
 }
 
-.region-sidebar-second .views-row-2 article,
-.region-sidebar-second .views-row-5 article,
-.region-sidebar-second .views-row-8 article,
-.region-sidebar-second .views-row-11 article,
-.region-sidebar-second .views-row-14 article {
-   background-color: #7a9f88;
-}
-
-.region-sidebar-second .views-row-3 article,
-.region-sidebar-second .views-row-6 article,
-.region-sidebar-second .views-row-9 article,
-.region-sidebar-second .views-row-12 article,
-.region-sidebar-second .views-row-15 article {
-   background-color: #a2af88;
-}
-
-.region-sidebar-second .lkselect-row-1 article,
-.region-sidebar-second .lkselect-row-4 article,
-.region-sidebar-second .lkselect-row-7 article,
-.region-sidebar-second .lkselect-row-10 article,
-.region-sidebar-second .lkselect-row-13 article {
-   background-color: #50a29a;
-}
-
-.region-sidebar-second .lkselect-row-2 article,
-.region-sidebar-second .lkselect-row-5 article,
-.region-sidebar-second .lkselect-row-8 article,
-.region-sidebar-second .lkselect-row-11 article,
-.region-sidebar-second .lkselect-row-14 article {
-   background-color: #7a9f88;
-}
-
-.region-sidebar-second .lkselect-row-3 article,
-.region-sidebar-second .lkselect-row-6 article,
-.region-sidebar-second .lkselect-row-9 article,
-.region-sidebar-second .lkselect-row-12 article,
-.region-sidebar-second .lkselect-row-15 article {
-   background-color: #a2af88;
-}
-
-.region-sidebar-second .lkselect-fb-row-1 article,
-.region-sidebar-second .lkselect-fb-row-5 article,
-.region-sidebar-second .lkselect-fb-row-9 article,
-.region-sidebar-second .lkselect-fb-row-13 article {
-   font-family: tahoma, verdana, sans-serif;
-   background-color: #62c2c2;
-   border: 2px solid #5f6f8f;
-}
-
-.region-sidebar-second .lkselect-fb-row-2 article,
-.region-sidebar-second .lkselect-fb-row-4 article,
-.region-sidebar-second .lkselect-fb-row-6 article,
-.region-sidebar-second .lkselect-fb-row-8 article,
-.region-sidebar-second .lkselect-fb-row-10 article,
-.region-sidebar-second .lkselect-fb-row-12 article,
-.region-sidebar-second .lkselect-fb-row-14 article,
-.region-sidebar-second .lkselect-fb-row-16 article {
-   font-family: tahoma, verdana, sans-serif;
-   background-color: #82c2b2;
-   border: 2px solid #5f6f8f;
-}
-
-.region-sidebar-second .lkselect-fb-row-3 article,
-.region-sidebar-second .lkselect-fb-row-7 article,
-.region-sidebar-second .lkselect-fb-row-11 article,
-.region-sidebar-second .lkselect-fb-row-15 article {
-   font-family: tahoma, verdana, sans-serif;
-   background-color: #82b2c2;
-   border: 2px solid #5f6f8f;
-}
-
-.region-sidebar-second .lkselect-fb-row,
-.region-sidebar-second .lkselect-fb-row a {
-   font-family: tahoma, verdana, sans-serif;
-   font-size: 16px;
-   line-height: 16px;
-}
-
-.region-sidebar-second h2.node-title,
-.region-sidebar-second h2.node-title a {
+.lkbottomfeature h2.node-title,
+.lkbottomfeature h2.node-title a {
    font-family: helvetica, arial, sans-serif;
    font-size: 25px;
    line-height: 24px;
@@ -199,14 +113,176 @@ form#search-block-form {
    padding: 6px;
 }
 
-.region-sidebar-second .commentfeed {
+
+.lkbottomfeature .storyimage {
+  width: 100%;
+  padding-left: 24px;
+  padding-bottom: 8px;
+}
+
+.lkbottomfeature .side-by-line,
+.lkbottomfeature .side-by-line a {
+   font-family: tahoma, verdana, sans-serif;
+   padding-top: 5px;
+   padding-bottom: 5px;
+}
+
+/* feature styles for right sidebar features */
+
+.lksidefeature img {
+  width: 180px;
+  margin: 0 auto;
+}
+
+.lksidefeature a,
+.lksidefeature a:link,
+.lksidefeature a:visited {
+  color: #001010;
+  text-decoration: none;
+}
+
+.lksidefeature .navsubmitted {
+   padding-bottom: 10px;
+}
+
+.lksidefeature h2 {
+   margin-bottom: 0px;
+   font-family: Trebuchet MS, sans-serif;
+   font-weight: bold;
+   letter-spacing: +1px;
+   font-variant: small-caps;
+}
+
+.lksidefeature {
+   color: #000000;
+   float: right;
+   width: 252px;
+   background-color: #e3e3e3;
+   margin-left: 6px;
+   margin-right: 0px;
+}
+
+.lksidefeature article {
+   width: 244px;
+   float: right;
+   padding: 8px;
+   margin-left: 0px;
+   margin-right: 0px;
+   margin-bottom: 14px;
+   border-radius: 12px;
+}
+
+.lksidefeature .block {
+   padding: 4px;
+}
+
+.lksidefeature .views-row-1 article .fb-side {
+   background-color: #ffff00;
+}
+
+.lksidefeature .views-row-1 article,
+.lksidefeature .views-row-4 article,
+.lksidefeature .views-row-7 article,
+.lksidefeature .views-row-10 article,
+.lksidefeature .views-row-13 article {
+   background-color: #50a29a;
+}
+
+.lksidefeature .views-row-2 article,
+.lksidefeature .views-row-5 article,
+.lksidefeature .views-row-8 article,
+.lksidefeature .views-row-11 article,
+.lksidefeature .views-row-14 article {
+   background-color: #7a9f88;
+}
+
+.lksidefeature .views-row-3 article,
+.lksidefeature .views-row-6 article,
+.lksidefeature .views-row-9 article,
+.lksidefeature .views-row-12 article,
+.lksidefeature .views-row-15 article {
+   background-color: #a2af88;
+}
+
+.lksidefeature .lkselect-row-1 article,
+.lksidefeature .lkselect-row-4 article,
+.lksidefeature .lkselect-row-7 article,
+.lksidefeature .lkselect-row-10 article,
+.lksidefeature .lkselect-row-13 article {
+   background-color: #50a29a;
+}
+
+.lksidefeature .lkselect-row-2 article,
+.lksidefeature .lkselect-row-5 article,
+.lksidefeature .lkselect-row-8 article,
+.lksidefeature .lkselect-row-11 article,
+.lksidefeature .lkselect-row-14 article {
+   background-color: #7a9f88;
+}
+
+.lksidefeature .lkselect-row-3 article,
+.lksidefeature .lkselect-row-6 article,
+.lksidefeature .lkselect-row-9 article,
+.lksidefeature .lkselect-row-12 article,
+.lksidefeature .lkselect-row-15 article {
+   background-color: #a2af88;
+}
+
+.lksidefeature .lkselect-fb-row-1 article,
+.lksidefeature .lkselect-fb-row-5 article,
+.lksidefeature .lkselect-fb-row-9 article,
+.lksidefeature .lkselect-fb-row-13 article {
+   font-family: tahoma, verdana, sans-serif;
+   background-color: #62c2c2;
+   border: 2px solid #5f6f8f;
+}
+
+.lksidefeature .lkselect-fb-row-2 article,
+.lksidefeature .lkselect-fb-row-4 article,
+.lksidefeature .lkselect-fb-row-6 article,
+.lksidefeature .lkselect-fb-row-8 article,
+.lksidefeature .lkselect-fb-row-10 article,
+.lksidefeature .lkselect-fb-row-12 article,
+.lksidefeature .lkselect-fb-row-14 article,
+.lksidefeature .lkselect-fb-row-16 article {
+   font-family: tahoma, verdana, sans-serif;
+   background-color: #82c2b2;
+   border: 2px solid #5f6f8f;
+}
+
+.lksidefeature .lkselect-fb-row-3 article,
+.lksidefeature .lkselect-fb-row-7 article,
+.lksidefeature .lkselect-fb-row-11 article,
+.lksidefeature .lkselect-fb-row-15 article {
+   font-family: tahoma, verdana, sans-serif;
+   background-color: #82b2c2;
+   border: 2px solid #5f6f8f;
+}
+
+.lksidefeature .lkselect-fb-row,
+.lksidefeature .lkselect-fb-row a {
+   font-family: tahoma, verdana, sans-serif;
+   font-size: 16px;
+   line-height: 16px;
+}
+
+.lksidefeature h2.node-title,
+.lksidefeature h2.node-title a {
+   font-family: helvetica, arial, sans-serif;
+   font-size: 25px;
+   line-height: 24px;
+   color: #001f0f;
+   padding: 6px;
+}
+
+.lksidefeature .commentfeed {
    font-family: tahoma, verdana, sans-serif;
    background-color: #32a252;
    border: 2px solid #2f2f2f;
    padding: 6px;
 }
 
-.region-sidebar-second .apfeed {
+.lksidefeature .apfeed {
    font-family: tahoma, verdana, sans-serif;
    background-color: #52b272;
    border: 2px solid #2f3f8f;
@@ -219,7 +295,7 @@ form#search-block-form {
   padding-bottom: 8px;
 }
 
-.region-sidebar-second img {
+.lksidefeature img {
   width: 180px;
   margin: 0 auto;
 }
@@ -229,20 +305,20 @@ form#search-block-form {
   font-weight: bold;
 }
 
-.region-sidebar-second .lkselect-fb-row img {
+.lksidefeature .lkselect-fb-row img {
   width: 150px;
   margin: 0 auto;
   padding-top: 5px;
 }
 
-.region-sidebar-second .side-by-line,
-.region-sidebar-second .side-by-line a {
+.lksidefeature .side-by-line,
+.lksidefeature .side-by-line a {
    font-family: tahoma, verdana, sans-serif;
    padding-top: 5px;
    padding-bottom: 5px;
 }
 
-.region-sidebar-second .lkselect-fb-row .fb-side-by-line {
+.lksidefeature .lkselect-fb-row .fb-side-by-line {
    font-family: tahoma, verdana;
    font-size: 11px;
    font-color: #0f2f3f;
@@ -251,7 +327,7 @@ form#search-block-form {
    text-align: center;
 }
 
-.region-sidebar-second .lkselect-fb-row .fb-side-by-line a {
+.lksidefeature .lkselect-fb-row .fb-side-by-line a {
    font-family: tahoma, verdana;
    font-size: 11px;
    font-color: #001f2f;
@@ -260,8 +336,8 @@ form#search-block-form {
    text-align: center;
 }
 
-.region-sidebar-second .side-tax-line,
-.region-sidebar-second .side-tax-line a {
+.lksidefeature .side-tax-line,
+.lksidefeature .side-tax-line a {
    padding-top: 5px;
    padding-bottom: 15px;
    font-family: Verdana, Georgia, serif;
