@@ -53,6 +53,22 @@ form#search-block-form {
 
 /* feature styles for bottom features */
 
+.lkbottomfeature .node-title {
+  float: left;
+}
+
+.lkbottomfeature .storyimage {
+  float: right;
+}
+
+.lkbottomfeature .dek {
+  float: left;
+}
+
+.lkbottomfeature #readmorethoughts {
+  float: left;
+}
+
 .lkbottomfeature img {
   width: 180px;
   margin: 0 auto;
@@ -79,29 +95,18 @@ form#search-block-form {
 
 .lkbottomfeature {
    color: #000000;
-   float: right;
-   width: 252px;
    background-color: #e3e3e3;
-   margin-left: 6px;
-   margin-right: 0px;
 }
 
 .lkbottomfeature article {
-   width: 244px;
-   float: right;
    padding: 8px;
-   margin-left: 0px;
-   margin-right: 0px;
-   margin-bottom: 14px;
    border-radius: 12px;
+   background-color: #50a29a;
+   margin-bottom: 12px;
 }
 
 .lkbottomfeature .block {
    padding: 4px;
-}
-
-.lkbottomfeature article {
-   background-color: #50a29a;
 }
 
 .lkbottomfeature h2.node-title,
@@ -112,7 +117,6 @@ form#search-block-form {
    color: #001f0f;
    padding: 6px;
 }
-
 
 .lkbottomfeature .storyimage {
   width: 100%;
