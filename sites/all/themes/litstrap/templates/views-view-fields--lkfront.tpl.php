@@ -74,6 +74,10 @@ foreach ($fields as $id => $field) {
       $bodysplit = explode("<!--break-->",$fullbody);
       $body = $bodysplit[0];
       $body .= "</div>"; // close the div that opens the body
+      // TEMPORARY HACK FOR LOCAL
+      $body = str_replace("/sites/default/files","/litkicks/sites/default/files",$body);
+      $body = str_replace("\"sites/default/files","\"/litkicks/sites/default/files",$body);
+      // END OF TEMPORARY HORRIBLE HACK
    }
 }
 

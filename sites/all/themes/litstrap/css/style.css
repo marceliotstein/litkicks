@@ -2,6 +2,25 @@
 /* custom CSS for literary kicks litmega drupal 7 */
 /**************************************************/
 
+.lkmain {
+  padding-top: 6px;
+}
+
+blockquote {
+  background-color: #d3d3d3;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  /*font-style: italic;*/
+}
+
+blockquote p {
+  font-size: 13.5px;
+  font-weight: normal;
+  line-height: normal;
+}
+
 .lkheader {
   padding-bottom: 12px;
 }
@@ -160,7 +179,7 @@ form#search-block-form {
 .lksidefeature {
    color: #000000;
    float: right;
-   width: 252px;
+   width: 220px;
    background-color: #e3e3e3;
    margin-left: 6px;
    margin-right: 0px;
@@ -487,7 +506,6 @@ a.lksitetitle:active {
   text-align: right;
   vertical-align: top;
 }
-
 
 /* comment styles */
 
