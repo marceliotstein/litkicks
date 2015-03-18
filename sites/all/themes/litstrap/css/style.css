@@ -12,7 +12,7 @@ blockquote {
   margin-right: 20px;
   margin-top: 15px;
   margin-bottom: 15px;
-  /*font-style: italic;*/
+  border-radius: 12px;
 }
 
 blockquote p {

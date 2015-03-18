@@ -90,11 +90,10 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
-  <?php if ($display_submitted): ?>
-    <div class="submitted">
-      <?php print $submitted; ?>
-    </div>
-  <?php endif; ?>
+  <?php
+  print "<div class=\"article-by-line\">" . $submitted . " on " . $date . "</div>";
+  print "<div class=\"article-tax-line\">" . $topiclist . "</div>";
+  ?>
 
   <div class="content"<?php print $content_attributes; ?>>
     <?php
