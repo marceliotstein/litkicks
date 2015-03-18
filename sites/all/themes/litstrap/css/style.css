@@ -25,7 +25,18 @@ blockquote p {
   padding-bottom: 12px;
 }
 
+.lksideleft {
+  padding: 0px;
+  margin: 0px;
+}
+
+.lkcore {
+  padding: 0px;
+  margin: 0px;
+}
+
 .lkcore-inner {
+  min-width: 512px;
   background-color: white;
   border-radius: 12px;
   padding: 12px;
@@ -182,9 +193,9 @@ form#search-block-form {
 }
 
 .lksidefeature article {
-   width: 244px;
+   width: 200px;
    float: right;
-   padding: 8px;
+   padding: 6px;
    margin-left: 0px;
    margin-right: 0px;
    margin-bottom: 14px;

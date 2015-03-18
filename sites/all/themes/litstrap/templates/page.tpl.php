@@ -99,11 +99,11 @@ $themeimgbase = $themebase . "/images";
     <!-- end of header -->
 
     <div class="row lkmain">
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 col-xl-2 collksideleft centered-text">
+      <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 col-xl-2 lksideleft centered-text">
         <?php print render($page['sidebar_first']); ?>
       </div>  <!-- /#sidebar-first -->
 
-      <div class="col-xs-9 col-sm-9 col-md-6 col-lg-7 col-xl-7 lkcore">
+      <div class="col-xs-9 col-sm-9 col-md-7 col-lg-7 col-xl-7 lkcore">
         <div class="lkcore-inner">
           <a id="main-content"></a>
 
