@@ -13,9 +13,13 @@ function litstrap_preprocess_node(&$variables, $hook) {
   hide($variables['content']['taxonomy_vocabulary_4']);
   hide($variables['content']['taxonomy_vocabulary_5']);
   hide($variables['content']['taxonomy_vocabulary_6']);
+
+  // process byline
+
   $variables['submitted'] = str_replace("Submitted ","",$variables['submitted']);
 
-  // place topics into comma-delimited array
+  // process topics
+
   $topiclist = "";
   if (!empty($variables['content']['taxonomy_vocabulary_1']['#items'])) {
     $numterms = 0;
@@ -30,4 +34,20 @@ function litstrap_preprocess_node(&$variables, $hook) {
     }
   }
   $variables['topiclist'] = $topiclist;
+
+  // process comments
+
+  $numcomments = count($variables['content']['comments']['comments']);
+  $commentintro = "";
+  $commentstr = "";
+  if ($numcomments==0) {
+    $commentstr .= "No Responses";
+  } else if ($numcomments==1) {
+    $commentstr .= "1 Response";
+  } else {
+    $commentstr .= $numcomments . " Responses";
+  }
+  $commentintro .= "<div id=\"commentintro\">" . $commentstr . " to \"" . $variables['title'] . "\"</div>";
+  $variables['commentintro'] = $commentintro;
+  hide($variables['content']['comments']['title']);
 }

@@ -2,6 +2,10 @@
 /* custom CSS for literary kicks litmega drupal 7 */
 /**************************************************/
 
+div#comments article {
+  border-radius: 12px;
+}
+
 .lkmain {
   padding-top: 6px;
 }

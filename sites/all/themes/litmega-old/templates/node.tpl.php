@@ -1,19 +1,19 @@
-<?php 
+<?php
 
-  // get node id for node calling page, if present 
+  // get node id for node calling page, if present
 
   $current_path = current_path();
   $pagenid = 0;
   if (arg(0) == 'node') {
      $pagenid = arg(1);
   }
-  
+
   // try to determine which columns this node is being displayed in
 
   print "<!-- CLASSES " . $classes . "-->";
   $frontpage = false;
   if (drupal_is_front_page()) {
-     $frontpage = true; 
+     $frontpage = true;
   }
 
   // show node content if this is front page main column or node page for this node
@@ -23,7 +23,7 @@
   $divhide = "";
   //if ($pagenid == $node->nid) {
   //   $divhide = "style=\"display:none\"";
-  //} 
+  //}
   ?>
 
   <article<?php print $attributes; ?> <?php print $divhide ?>>
@@ -32,23 +32,23 @@
      <?php print render($title_prefix); ?>
      <?php if (!$page && $title): ?>
      <header>
-        <?php 
-        if ($node->type=="tout") { 
+        <?php
+        if ($node->type=="tout") {
            ?>
            <h2<?php print $title_attributes; ?>><?php print $title ?></h2>
-           <?php 
+           <?php
         } else {
            ?>
            <h2<?php print $title_attributes; ?>><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
-           <?php 
+           <?php
         }
-        ?>  
+        ?>
      </header>
      <?php endif; ?>
 
-     <?php 
+     <?php
      // i really have no idea what this is for -- oct 2012
-     // 
+     //
      // Oct 2013 -- this now causes an error message!  still don't know what it's for,
      // removing it
      if (false) {
@@ -66,22 +66,22 @@
         }
      }
      ?>
-  
+
      <?php print render($title_suffix); ?>
 
-     <?php 
-     if ($node->type!="tout") { 
-        
+     <?php
+     if ($node->type!="tout") {
+
         if (strpos($name,">Anonymous<")===FALSE) { // exclude "Anonymous" author
            if (!$teaser) {
               // this is the main article byline display
               ?>
               <footer class="submitted">By <?php print $name; ?> on <?php print $date; ?></footer>
               <?php
-           } 
-        } 
+           }
+        }
         ?>
-  
+
         <div<?php print $content_attributes; ?>>
           <?php
             global $series_text;
@@ -108,13 +108,13 @@
         }
      }
      ?>
-  
+
      <div class="clearfix">
 
        <?php
 
        //
-       // addthis 
+       // addthis
        //
 
        if (($node->type!="tout") &&
@@ -153,7 +153,7 @@
              $comment_string = $num_comments . " Responses";
           }
           print "<div id=\"commentintro\">" . $comment_string . " to \"" . $title . "\"</div>";
-          print render($content['comments']); 
+          print render($content['comments']);
        } else {
           //if ($node->type!="tout") {
              $comment_string = "";
