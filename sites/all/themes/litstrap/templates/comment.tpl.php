@@ -13,7 +13,7 @@
   <footer class="comment-submitted">
    <?php
       print t('by !username on !datetime',
-      array('!username' => $author, '!datetime' => '<time datetime="' . $datetime . '">' . $created . '</time>'));
+      array('!username' => $author, '!datetime' => '<time>' . $created . '</time>'));
     ?>
   </footer>
 
