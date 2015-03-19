@@ -37,7 +37,10 @@ function litstrap_preprocess_node(&$variables, $hook) {
 
   // process comments
 
-  $numcomments = count($variables['content']['comments']['comments']);
+  $numcomments = 0;
+  if (!empty($variables['content']['comments'])) {
+    $numcomments = count($variables['content']['comments']['comments']);
+  }
   $commentintro = "";
   $commentstr = "";
   if ($numcomments==0) {
