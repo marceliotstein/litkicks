@@ -58,13 +58,8 @@ $themeimgbase = $themebase . "/images";
       </div>
       <!-- wide way -->
       <div class="hidden-xs hidden-sm col-md-12 col-lg-12 col-xl-12">
-        <table class="lktable-wide">
+        <table class="lkwidetoplinks">
           <tr>
-            <td rowspan="2" class="lklogo-wide">
-              <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-                <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-              </a>
-            </td>
             <td class="lkwidetoplinks-td">
               <div class="branding-links">
                 <span class="branding-linkbox">
@@ -85,7 +80,14 @@ $themeimgbase = $themebase . "/images";
               </div>
             </td>
           </tr>
+        </table>
+        <table class="lktable-wide">
           <tr>
+            <td class="lklogo-wide">
+              <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+                <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+              </a>
+            </td>
             <td class="lksitetitle-td-wide">
               <a class="lksitetitle lksitetitle-wide" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">Literary Kicks</a>
             </td>
