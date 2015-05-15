@@ -140,7 +140,7 @@ $themeimgbase = $themebase . "/images";
       </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer text-center">
       <?php print render($page['footer']); ?>
     </footer>
 
