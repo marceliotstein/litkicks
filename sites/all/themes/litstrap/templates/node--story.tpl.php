@@ -125,7 +125,11 @@
 
   <?php
     print $commentintro;
-    print render($content['comments']);
   ?>
+  <div class="comment-section centered">
+    <?php
+      print render($content['comments']);
+    ?>
+  </div>
 
 </div>

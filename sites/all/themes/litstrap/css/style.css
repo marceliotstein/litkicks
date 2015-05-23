@@ -552,12 +552,13 @@ div#comments h1, div#comments h2 {
 }
 
 div#comments article {
-   width: 464px;
+   /*width: 464px;*/
    border-style: solid;
    border-width: 1px;
    border-color: #404048;
-   padding: 6px;
-   margin: 10px;
+   padding: 2px 6px 2px 6px;
+   margin: 0 auto;
+   margin-top: 18px;
    margin-bottom: 18px;
 }
 
