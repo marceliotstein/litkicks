@@ -33,7 +33,13 @@ blockquote p {
 }
 
 .lkheader {
-  padding-bottom: 12px;
+  padding-bottom: 0px;
+}
+
+@media(min-width:992px) {
+  .lkheader {
+    padding-bottom: 12px;
+  }
 }
 
 .lksideleft {
@@ -49,7 +55,7 @@ blockquote p {
   min-width: 530px;
   background-color: white;
   border-radius: 12px;
-  padding: 12px;
+  padding: 0px 12px 0px 12px;
   margin-right: 12px;
 }
 
