@@ -102,6 +102,10 @@
       hide($content['links']);
 
       $rc = render($content);
+      // TEMPORARY HACK FOR LOCAL
+      $rc = str_replace("/sites/default/files","/litkicks/sites/default/files",$rc);
+      $rc = str_replace("\"sites/default/files","\"/litkicks/sites/default/files",$rc);
+      // END OF LOCAL HACK
       print $rc;
     ?>
   </div>
