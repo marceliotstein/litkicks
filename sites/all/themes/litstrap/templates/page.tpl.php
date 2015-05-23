@@ -23,11 +23,11 @@ $themeimgbase = $themebase . "/images";
           <tr>
             <td class="lklogo-narrow">
               <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-                <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+                <img class="img-responsive" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
               </a>
             </td>
             <td class="lksitetitle-td-narrow">
-              <a class="lksitetitle lksitetitle-narrow" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">Literary Kicks</a>
+              <a class="lksitetitle lksitetitle-narrow" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">Litkicks</a>
             </td>
             <td class="lkmenubars">
               <div class="dropdown pull-right">
@@ -36,19 +36,22 @@ $themeimgbase = $themebase . "/images";
                 </button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdown1">
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
-                    <a href="/about">About This Site</a>
+                    <a href="/AboutUs">About Literary Kicks</a>
                   </li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
-                    <a href="/user/">Create Account or Log In</a>
+                    <a href="/search">Search</a>
                   </li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
-                    <a href="/about">Search This Site</a>
+                    <a href="http://facebook.com/litkicks" target="_blank">Litkicks on Facebook</a>
                   </li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
-                    <a href="/newsletter/signup">Keep In Touch Via Email</a>
+                    <a href="http://twitter.com/asheresque" target="_blank">Levi Asher on Twitter</a>
                   </li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
-                    <a href="/feed">Subscribe To Feed</a>
+                    <a href="http://feeds.feedburner.com/LiteraryKicks" target="_blank">Subscribe To Feed</a>
+                  </li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                    <a href="/Archives">Archives (1994 to 2015)</a>
                   </li>
                 </ul>
               </div>
