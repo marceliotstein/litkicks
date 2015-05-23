@@ -17,12 +17,15 @@ blockquote {
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 12px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 135%;
 }
 
 blockquote p {
-  font-size: 13.5px;
+  font-size: 15px;
   font-weight: normal;
-  line-height: normal;
+  line-height: 135%;
 }
 
 .lkheader {
@@ -39,7 +42,7 @@ blockquote p {
 }
 
 .lkcore-inner {
-  min-width: 512px;
+  min-width: 530px;
   background-color: white;
   border-radius: 12px;
   padding: 12px;
@@ -392,7 +395,9 @@ form#search-block-form {
 /* sitewide styles */
 
 body {
-   font: 13.5px/1.5 Trebuchet MS, Helvetica, Arial, sans-serif;
+   font-size: 15px;
+   font-family: Trebuchet MS, Helvetica, Arial, sans-serif;
+   line-height: 135%;
    background-color: #e3e3e3;
 }
 
@@ -452,21 +457,24 @@ a.lksitetitle:active {
 }
 
 .lksitetitle-narrow {
-  font-size: 5em;
+  font-size: 3em;
   padding-left: 12px;
 }
 
 .lksitetitle-wide {
-  font-size: 5em;
+  font-size: 4.2em;
   padding-left: 12px;
 }
 
 .lkwidetoplinks {
   width: 100%;
+  padding-top: 0px;
 }
 
 .lkwidetoplinks-td {
+  padding-top: 0px;
   text-align: right;
+  vertical-align: top;
 }
 
 .wide-topline {
@@ -506,7 +514,7 @@ a.lksitetitle:active {
 }
 
 .lklogo-narrow {
-  width: 240px;
+  width: 200px;
 }
 
 .lklogo-wide {
@@ -519,8 +527,9 @@ a.lksitetitle:active {
 }
 
 .lksitetitle-td-wide {
+  padding-top: 20px;
   text-align: left;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .lkmenubars {
