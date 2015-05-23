@@ -91,7 +91,7 @@
   <?php print render($title_suffix); ?>
 
   <?php
-  print "<div class=\"article-by-line\">" . $submitted . " on " . $date . "</div>";
+  print "<div class=\"article-by-line\">" . $submitted . "</div>";
   print "<div class=\"article-tax-line\">" . $topiclist . "</div>";
   ?>
 
