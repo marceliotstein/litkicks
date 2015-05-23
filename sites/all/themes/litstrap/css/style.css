@@ -485,6 +485,10 @@ a.lksitetitle:active {
   text-align: right;
 }
 
+.title-table-row {
+  height: 40px;
+}
+
 .branding-linkbox {
   font-family: verdana, georgia, serif;
   font-variant: small-caps;

@@ -63,13 +63,13 @@ $themeimgbase = $themebase . "/images";
       <div class="hidden-xs hidden-sm col-md-12 col-lg-12 col-xl-12">
         <table class="lktable-wide">
           <tr>
-            <td rowspan="2" class="lklogo-wide">
+            <td rowspan="3" class="lklogo-wide">
               <a class="logo navbar-btn" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
                 <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
               </a>
             </td>
             <td class="lkwidetoplinks-td">
-              <div class="branding-links">
+              <div class="title-table-row branding-links">
                 <span class="branding-linkbox">
                   <a href="/Archives">Archives (1994 to 2015)</a> <img src="<?php print $themeimgbase ?>/lkicon24.png" />
                 </span>
@@ -91,6 +91,11 @@ $themeimgbase = $themebase . "/images";
           <tr>
             <td class="lksitetitle-td-wide">
               <a class="lksitetitle lksitetitle-wide" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">Literary Kicks</a>
+            </td>
+          </tr>
+          <tr class="title-table-row">
+            <td>
+              &nbsp;
             </td>
           </tr>
         </table>
