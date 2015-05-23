@@ -10,6 +10,10 @@ div#comments article {
   padding-top: 6px;
 }
 
+.content center {
+  margin-bottom: 15px;
+}
+
 blockquote {
   background-color: #d3d3d3;
   margin-left: 20px;
