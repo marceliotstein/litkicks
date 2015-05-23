@@ -100,8 +100,8 @@ print "<h2 class=\"node-title lkheadline\">" . $title . "</h2>";
 print "<div class=\"article-by-line\">by " . $author . " on " . $date . "</div>";
 print "<div class=\"article-tax-line\">" . $tax_topic . "</div>";
 print $body;
-print "<div id=\"readmorethoughts\"><a href=\"" . $path . "\">... Read more and add your thoughts " . $comment_string . "</a></div>";
-print "<center><img src=\"" . $frontbar_url . "\" /></center>";
+print "<div class=\"front-readmore\"><a href=\"" . $path . "\">... Read more and add your thoughts " . $comment_string . "</a></div>";
+print "<div class=\"front-separator\"><img src=\"" . $frontbar_url . "\" /></div>";
 print "</article>";
 
 ?>

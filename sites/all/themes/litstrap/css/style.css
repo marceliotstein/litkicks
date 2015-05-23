@@ -588,7 +588,7 @@ div#comments article {
 }
 
 #commentintro, #commentintro a,
-#readmorethoughts, #readmorethoughts a {
+.front-readmore, .front-readmore a {
    font-family: Verdana, Georgia, serif;
    font-weight: bold;
    font-variant: small-caps;
@@ -598,8 +598,15 @@ div#comments article {
    font-size: 1.2em;
 }
 
-#readmorethoughts, #readmorethoughts a {
+.front-readmore, .front-readmore a {
    float: right;
+   padding: 12px 0px 6px 0px;
+}
+
+.front-separator {
+  clear: both;
+  padding: 6px 0px 12px 0px;
+  text-align: center;
 }
 
 #footerlinks {
