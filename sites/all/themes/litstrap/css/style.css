@@ -2,10 +2,6 @@
 /* custom CSS for literary kicks litmega drupal 7 */
 /**************************************************/
 
-div#comments article {
-  border-radius: 12px;
-}
-
 .lkmain {
   padding-top: 6px;
 }
@@ -16,6 +12,10 @@ div#comments article {
 }
 
 .content center {
+  margin-bottom: 15px;
+}
+
+.view-lkfront center {
   margin-bottom: 15px;
 }
 
@@ -75,8 +75,7 @@ blockquote p {
 .article-by-line,
 .article-by-line a {
    margin-top: 5px;
-   margin-bottom: 18px;
-   font-weight: bold;
+   margin-bottom: 20px;
    font-style: italic;
    font-size: 20px;
 }
@@ -84,7 +83,7 @@ blockquote p {
 .article-tax-line,
 .article-tax-line a {
    margin-top: 0px;
-   margin-bottom: 18px;
+   margin-bottom: 20px;
    font-family: Verdana, Georgia, serif;
    font-variant: small-caps;
    line-height: .86em;
@@ -584,11 +583,11 @@ div#comments h1, div#comments h2 {
 }
 
 div#comments article {
-   /*width: 464px;*/
+   border-radius: 12px;
    border-style: solid;
    border-width: 1px;
-   border-color: #404048;
-   padding: 2px 6px 2px 6px;
+   border-color: black;
+   padding: 2px 15px 2px 15px;
    margin: 0 auto;
    margin-top: 18px;
    margin-bottom: 18px;
