@@ -91,7 +91,11 @@
   <?php print render($title_suffix); ?>
 
   <?php
-  print "<div class=\"article-by-line\">" . $submitted . "</div>";
+  $author = $node->name;
+  $createdate = format_date($node->created, 'custom', "F jS, Y");
+  $byline = $author . " &#8226; " . $createdate;
+
+  print "<div class=\"article-by-line\">" . $byline . "</div>";
   print "<div class=\"article-tax-line\">" . $topiclist . "</div>";
   ?>
 

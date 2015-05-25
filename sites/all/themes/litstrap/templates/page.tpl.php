@@ -12,7 +12,7 @@ $themeimgbase = $themebase . "/images";
 <div class="lkmain container-fluid">
 
   <!--<div class="lkbuffer-left hidden-xs hidden-sm hidden-md col-lg-1 col-xl-1">
-    &nbsp;
+    &nbsp;x
   </div>-->
 
   <div class="lktheater col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -111,7 +111,10 @@ $themeimgbase = $themebase . "/images";
         </div>
       </div>  <!-- /#sidebar-first -->
 
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 lkcore">
+      <div class="col-xs-1 col-sm-1 hidden-md hidden-lg hidden-xl">
+        &nbsp;
+      </div>
+      <div class="col-xs-10 col-sm-10 col-md-6 col-lg-6 col-xl-6 lkcore">
         <div class="lkcore-inner">
           <a id="main-content"></a>
 
@@ -131,6 +134,9 @@ $themeimgbase = $themebase . "/images";
           <?php endif; ?>
           <?php print render($page['content']); ?>
         </div>
+      </div>
+      <div class="col-xs-1 col-sm-1 hidden-md hidden-lg hidden-xl">
+        &nbsp;
       </div>
 
       <!-- features in right nav for wide only -->

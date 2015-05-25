@@ -10,8 +10,17 @@ div#comments article {
   padding-top: 6px;
 }
 
+.node-story {
+  padding: 0px 10px 0px 10px;
+  line-height: 1.6em;
+}
+
 .content center {
   margin-bottom: 15px;
+}
+
+.content p {
+  margin-bottom: 25px;
 }
 
 blockquote {
@@ -21,13 +30,15 @@ blockquote {
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 12px;
-  font-size: 15px;
+  font-size: 19px;
+  font-style: italic;
   font-weight: normal;
   line-height: 135%;
 }
 
 blockquote p {
-  font-size: 15px;
+  font-size: 19px;
+  font-style: italic;
   font-weight: normal;
   line-height: 135%;
 }
@@ -63,14 +74,17 @@ blockquote p {
 
 .article-by-line,
 .article-by-line a {
-   padding-top: 5px;
-   padding-bottom: 5px;
+   margin-top: 5px;
+   margin-bottom: 18px;
+   font-weight: bold;
+   font-style: italic;
+   font-size: 20px;
 }
 
 .article-tax-line,
 .article-tax-line a {
-   padding-top: 5px;
-   padding-bottom: 12px;
+   margin-top: 0px;
+   margin-bottom: 18px;
    font-family: Verdana, Georgia, serif;
    font-variant: small-caps;
    line-height: .86em;
@@ -405,7 +419,7 @@ form#search-block-form {
 /* sitewide styles */
 
 body {
-   font-size: 15px;
+   font-size: 19px;
    font-family: Trebuchet MS, Helvetica, Arial, sans-serif;
    line-height: 135%;
    background-color: #ffffff;
@@ -424,9 +438,11 @@ body {
 }
 
 .lkheadline {
-  font-family: helvetica, arial, sans-serif;
-  font-size: 35px;
+  font-family: Quicksand, helvetica, arial, sans-serif;
+  font-weight: bold;
+  font-size: 37px;
   color: black;
+  margin-bottom: 28px;
 }
 
 .lkheadline a,
@@ -473,7 +489,7 @@ a.lksitetitle:active {
 }
 
 .lksitetitle-narrow {
-  font-size: 3em;
+  font-size: 2em;
   padding-left: 12px;
 }
 

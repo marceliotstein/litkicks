@@ -95,9 +95,10 @@ if (!empty($num_comments)) {
 global $base_url;
 $themeimg_url = $base_url . "/sites/all/themes/litstrap/images";
 $frontbar_url = $themeimg_url . "/lkfrontbar.png";
+
 print "<article>";
 print "<h2 class=\"node-title lkheadline\">" . $title . "</h2>";
-print "<div class=\"article-by-line\">by " . $author . " on " . $date . "</div>";
+print "<div class=\"article-by-line\">by " . $author . " &#8226; " . $date . "</div>";
 print "<div class=\"article-tax-line\">" . $tax_topic . "</div>";
 print $body;
 print "<div class=\"front-readmore\"><a href=\"" . $path . "\">... Read more and add your thoughts " . $comment_string . "</a></div>";
