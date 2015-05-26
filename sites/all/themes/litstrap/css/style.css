@@ -63,11 +63,20 @@ blockquote p {
 }
 
 .lkcore-inner {
-  min-width: 530px;
   background-color: white;
   border-radius: 12px;
   padding: 0px 12px 0px 12px;
   margin-right: 12px;
+}
+
+.lkcore-inner img {
+  width: 100%;
+}
+
+@media(min-width:768px) {
+  .lkcore-inner {
+     min-width: 530px;
+  }
 }
 
 /* left sidebar styles */
@@ -521,6 +530,7 @@ a.lksitetitle:active {
 }
 
 .branding-linkbox {
+  font-size: 15px;
   font-family: verdana, georgia, serif;
   font-variant: small-caps;
   margin-left: 8px;
