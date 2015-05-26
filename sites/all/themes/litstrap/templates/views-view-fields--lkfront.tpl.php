@@ -97,7 +97,7 @@ $themeimg_url = $base_url . "/sites/all/themes/litstrap/images";
 $frontbar_url = $themeimg_url . "/lkfrontbar.png";
 
 print "<article>";
-print "<h2 class=\"node-title lkheadline\">" . $title . "</h2>";
+print "<h1 class=\"node-title lkheadline\">" . $title . "</h1>";
 print "<div class=\"article-by-line\">" . $author . " &#8226; " . $date . "</div>";
 print "<div class=\"article-tax-line\">" . $tax_topic . "</div>";
 print $body;

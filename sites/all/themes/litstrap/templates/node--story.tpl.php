@@ -86,7 +86,7 @@
 
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+    <h1<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
@@ -117,16 +117,9 @@
   </div>
   <br /><br />
 
-  <!-- AddThis Button BEGIN -->
-  <div class="addthis_toolbox addthis_default_style ">
-    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-    <a class="addthis_button_tweet"></a>
-    <a class="addthis_button_pinterest_pinit"></a>
-    <a class="addthis_counter addthis_pill_style"></a>
-  </div>
-  <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-  <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=asheresque"></script>
-  <!-- AddThis Button END -->
+  <!-- AddThis BEGIN -->
+  <div class="addthis_sharing_toolbox"></div>
+  <!-- AddThis END -->
   <br />
 
   <?php

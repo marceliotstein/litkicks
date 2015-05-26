@@ -2,6 +2,15 @@
 /* custom CSS for literary kicks litmega drupal 7 */
 /**************************************************/
 
+/* sitewide styles */
+
+body {
+   font-size: 19px;
+   font-family: Trebuchet MS, Helvetica, Arial, sans-serif;
+   line-height: 135%;
+   background-color: #ffffff;
+}
+
 .lkmain {
   padding-top: 6px;
 }
@@ -57,16 +66,20 @@ blockquote p {
   padding: 0px;
 }
 
+.lksideleft .well {
+  border-width: 0px;
+}
+
 .lkcore {
   padding: 0px;
   margin: 0px;
 }
 
 .lkcore-inner {
-  background-color: white;
+  /*background-color: white;
   border-radius: 12px;
   padding: 0px 12px 0px 12px;
-  margin-right: 12px;
+  margin-right: 12px;*/
 }
 
 .lkcore-inner img {
@@ -75,7 +88,7 @@ blockquote p {
 
 @media(min-width:768px) {
   .lkcore-inner {
-     min-width: 530px;
+     min-width: 520px;
   }
 }
 
@@ -230,7 +243,6 @@ form#search-block-form {
    color: #000000;
    float: right;
    width: 232px;
-   background-color: #e3e3e3;
    margin-left: 6px;
    margin-right: 0px;
 }
@@ -424,20 +436,7 @@ form#search-block-form {
    line-height: .83em;
 }
 
-/* sitewide styles */
 
-body {
-   font-size: 19px;
-   font-family: Trebuchet MS, Helvetica, Arial, sans-serif;
-   line-height: 135%;
-   background-color: #ffffff;
-}
-
-@media(min-width:992px) {
-  body {
-   background-color: #e3e3e3;
-  }
-}
 
 .lkborder {
   border-style: dashed;
@@ -502,7 +501,7 @@ a.lksitetitle:active {
 }
 
 .lksitetitle-wide {
-  font-size: 4.2em;
+  font-size: 2.8em;
   padding-left: 12px;
 }
 
@@ -530,7 +529,7 @@ a.lksitetitle:active {
 }
 
 .branding-linkbox {
-  font-size: 15px;
+  font-size: 13px;
   font-family: verdana, georgia, serif;
   font-variant: small-caps;
   margin-left: 8px;
@@ -635,6 +634,6 @@ div#comments article {
 }
 
 #footerlinks {
-  font-size: 1.7em;
-  font-weight: bold;
+  font-family: Quicksand, helvetica, arial, sans-serif;
+  font-size: 1em;
 }
