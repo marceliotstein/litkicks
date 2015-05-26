@@ -88,7 +88,7 @@ blockquote p {
 
 @media(min-width:768px) {
   .lkcore-inner {
-     min-width: 520px;
+     min-width: 510px;
   }
 }
 
@@ -145,7 +145,6 @@ form#search-block-form {
 
 .lkbottomfeature {
    color: #000000;
-   background-color: #e3e3e3;
    width: 500px;
    margin: 0 auto;
 }
