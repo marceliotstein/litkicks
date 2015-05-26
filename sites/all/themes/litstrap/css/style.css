@@ -134,12 +134,13 @@ form#search-block-form {
 
 .topicbox, .topicbox a, .topicbox a:link,
 .topicbox a:visited, .topicbox a:active {
-  padding: 5px;
+  padding: 4px;
   margin: 0px 2px 0px 2px;
   color: #ffffff;
   background-color: #000000;
   font-family: Verdana, Georgia, serif;
   font-variant: small-caps;
+  font-size: .9em;
   line-height: 2em;
 }
 
