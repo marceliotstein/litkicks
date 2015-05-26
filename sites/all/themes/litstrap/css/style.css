@@ -102,14 +102,7 @@ blockquote p {
    font-size: 20px;
 }
 
-.article-tax-line,
-.article-tax-line a {
-   margin-top: 0px;
-   margin-bottom: 20px;
-   font-family: Verdana, Georgia, serif;
-   font-variant: small-caps;
-   line-height: .86em;
-}
+
 
 .region-sidebar-first {
   padding: 0px;
@@ -135,6 +128,19 @@ blockquote p {
 
 form#search-block-form {
   width: 160px;
+}
+
+/* taxonomy term display for articles */
+
+.topicbox, .topicbox a, .topicbox a:link,
+.topicbox a:visited, .topicbox a:active {
+  padding: 5px;
+  margin: 0px 2px 0px 2px;
+  color: #ffffff;
+  background-color: #000000;
+  font-family: Verdana, Georgia, serif;
+  font-variant: small-caps;
+  line-height: 2em;
 }
 
 /* feature styles for bottom features */
