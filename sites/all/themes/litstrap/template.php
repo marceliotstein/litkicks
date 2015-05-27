@@ -33,7 +33,7 @@ function litstrap_preprocess_node(&$variables, $hook) {
     foreach ($variables['content']['taxonomy_vocabulary_1']['#items'] as $taxitem) {
       $thisterm = $taxitem['taxonomy_term']->name;
       $thistermtoken = str_replace(" ","-",strtolower($thisterm));
-      $topiclist .= '<span class="topicbox"><a href="/topic/' . $thistermtoken . '">' . $thisterm . '</a></span> ';
+      $topiclist .= '<span class="topicbox"><nobr><a href="/topic/' . $thistermtoken . '">' . $thisterm . '</a></nobr></span> ';
     }
   }
   $variables['topiclist'] = $topiclist;
