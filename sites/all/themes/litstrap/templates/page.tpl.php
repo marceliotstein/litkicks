@@ -111,10 +111,10 @@ $themeimgbase = $themebase . "/images";
         </div>
       </div>  <!-- /#sidebar-first -->
 
-      <div class="col-xs-1 col-sm-1 hidden-md hidden-lg hidden-xl">
+      <div class="hidden-xs col-sm-1 hidden-md hidden-lg hidden-xl">
         &nbsp;
       </div>
-      <div class="col-xs-10 col-sm-10 col-md-6 col-lg-6 col-xl-6 lkcore">
+      <div class="col-xs-12 col-sm-10 col-md-6 col-lg-6 col-xl-6 lkcore">
         <div class="lkcore-inner">
           <a id="main-content"></a>
 
@@ -135,7 +135,7 @@ $themeimgbase = $themebase . "/images";
           <?php print render($page['content']); ?>
         </div>
       </div>
-      <div class="col-xs-1 col-sm-1 hidden-md hidden-lg hidden-xl">
+      <div class="hidden-xs col-sm-1 hidden-md hidden-lg hidden-xl">
         &nbsp;
       </div>
 
