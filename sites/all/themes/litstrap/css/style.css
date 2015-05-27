@@ -76,14 +76,15 @@ blockquote p {
 }
 
 .lkcore-inner {
-  /*background-color: white;
-  border-radius: 12px;
   padding: 0px 12px 0px 12px;
-  margin-right: 12px;*/
 }
 
 .lkcore-inner img {
   width: 100%;
+}
+
+@media(min-width:480px) {
+  padding: 0px 0px 0px 0px;
 }
 
 @media(min-width:768px) {
