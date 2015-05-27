@@ -452,9 +452,16 @@ form#search-block-form {
 .lkheadline {
   font-family: Quicksand, helvetica, arial, sans-serif;
   font-weight: bold;
-  font-size: 43px;
+  font-size: 34px;
   color: black;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
+}
+
+@media(min-width:768px) {
+  .lkheadline {
+    font-size: 43px;
+    margin-bottom: 20px;
+  }
 }
 
 .lkheadline a,
@@ -501,7 +508,7 @@ a.lksitetitle:active {
 }
 
 .lksitetitle-narrow {
-  font-size: 2em;
+  font-size: 1.8em;
   padding-left: 12px;
 }
 
