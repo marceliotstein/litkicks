@@ -510,6 +510,7 @@ function menu_execute_active_handler($path = NULL, $deliver = TRUE) {
   // Only continue if the site status is not set.
   if ($page_callback_result == MENU_SITE_ONLINE) {
     if ($router_item = menu_get_item($path)) {
+print_r($router_item);
       if ($router_item['access']) {
         if ($router_item['include_file']) {
           require_once DRUPAL_ROOT . '/' . $router_item['include_file'];
