@@ -17,7 +17,6 @@
   $byline = $author . " &#8226; " . $createdate;
 
   print "<div class=\"article-by-line\">" . $byline . "</div>";
-  print "<div class=\"article-tax-line\">" . $topiclist . "</div>";
   ?>
 
   <div class="content"<?php print $content_attributes; ?>>
@@ -42,14 +41,4 @@
   <div class="addthis_sharing_toolbox"></div>
   <!-- AddThis END -->
   <br />
-
-  <?php
-    print $commentintro;
-  ?>
-  <div class="comment-section centered">
-    <?php
-      print render($content['comments']);
-    ?>
-  </div>
-
 </div>
